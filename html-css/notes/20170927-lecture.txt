@@ -1,0 +1,27 @@
+Lecture Notes:
+
+September 27, 2017
+
+There are entire non-sql databases based on json
+mongodb
+
+sql does not duplicate
+json duplicates
+
+More info on json at:
+www.json.org
+
+bson is the binary form of json
+
+2 methods to pass info from javascript to php
+cookies and ajax
+
+stringify in json represents it as it would be in the html code so "/" characters
+	get represented as %2F or " " gets represented as a +
+	
+for (property in $_GET)
+for loop to print out all the name/value pairs in an object
+
+local storage limits
+4k for cookies
+5M for website data  

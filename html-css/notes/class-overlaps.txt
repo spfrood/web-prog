@@ -1,0 +1,14 @@
+CSC-17B with JavaScript and PHP class overlaps
+Classes for which this class should also provide course credit or
+have as a prerequisite 
+
+CSC-12 - PHP Dynamic Web Site Programming 			3 units
+CSC-14A - Web Programming: JavaScript 				3 units 
+CIS-72A - Introduction to Web Page Creation 		1.5 units
+CIS-72B - Intermediate Web Page Creation 			1.5 units
+using Cascading Style Sheets (CSS)
+
+Also include maybe?
+CSC-63 - Introduction to Structured 				3 units
+Query Language (SQL)
+

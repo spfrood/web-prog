@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/*
+ Original stylesheet for Final Project
+*/
+
+body {
+    background-color: tan;
+}
+
+h1,
+h2 {
+    font-family: sans-serif;
+    color: darkslategrey;
+}
+
+p {
+    width: 90%;
+    font-family: Helvetica, Arial, serif;
+}
+
+th {
+    font-family: cursive;
+    text-align: center;
+
+}
+
+a:hover {
+    background-color: fuchsia;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+    width: 85%;
+    max-height: inherit;
+}
+
+table#listable {
+    border-collapse: collapse;
+    padding: 0px;
+    background-color: beige;
+}
+
+table#listable th,
+table#listable td {
+    border: solid 2px saddlebrown;
+    padding: 10px;
+}
+
+table#listable caption {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form#feedbackform {
+    background-color: beige;
+    max-width: 85%;
+}
+
+.fltright {
+    max-height: 400px;
+    max-width: 400px;
+    float: right;
+    padding: 10px;
+}
+
+.fltleft {
+    max-height: 400px;
+    max-width: 400px;
+    float: left;
+    padding: 10px;
+}
+

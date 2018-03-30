@@ -1,0 +1,326 @@
+
+<!-- saved from url=(0063)http://www.faculty.rcc.edu/mcleod/css/handouts/assignment2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CSS Assignment #2</title>
+
+
+<link href="./CSS Assignment #2_files/handouts_print.css" rel="stylesheet" type="text/css" media="print">
+<link href="./CSS Assignment #2_files/handouts_screen.css" rel="stylesheet" type="text/css" media="screen">
+
+<style type="text/css">
+<!--
+.answers {	list-style-type: lower-alpha;
+}
+.code {
+	font-family: "Courier New", Courier, monospace;
+}
+/*
+body {
+	background-image: url(../../bg-assign-not-ready.gif);
+}
+*/
+-->
+</style>
+</head>
+
+<body>
+<h1>Assignment #2</h1>
+<p class="rcc">RCC Fall 2017 CIS-72B CSS</p>
+<h3> Selection Techniques &amp; Typography<br>
+  Due <span class="duedate">Wednesday </span>November 15 at 11:59pm In Blackboard<br>
+  150 Points</h3>
+<p>Note that for this and future assignments, more of the new and exciting parts of CSS are going to be introduced. Because of this, it becomes increasingly important for you to have recent versions of your browsers in order to obtain the intended page displays when you test them out. So please update your testing browsers as needed.</p>
+<p>Be aware that our textbook (like any book) does have a few errors. Fortunately, ours also has an "errata" page, where known errors are corrected and updated over time. For the most recent version, refer to this link to avoid problems in your work: <a href="http://www.oreilly.com/catalog/errata.csp?isbn=9781491918050" target="_blank">http://oreilly.com/catalog/errata.csp?isbn=9781491918050</a><a href="http://oreilly.com/catalog/errata.csp?isbn=0636920024996"></a></p>
+<h2>Part 1: Selection  Video -- Resume Formatting (Hybrid  Video #2)<br>
+30 Points</h2>
+<p>For this part of the assignment, you are asked to watch, listen, and do the same steps as are done in the "selection" video. The links to this  video itself, to the data files you'll need, and to the code editor that is used in the video appear below. Downloading and installing the code editor (Windows only) is optional but recommended if you want the easiest way to duplicate the code created in the video. But before you attempt to access this video, you should first read the "<a href="http://www.faculty.rcc.edu/mcleod/css/handouts/about_hybrid_videos.html" target="_blank">About Hybrid Videos"</a> document (if you haven't already) so you are sure to be experiencing the video as it was intended. </p>
+<p>Link to the standard Flash movie version of the video: <a href="http://www.faculty.rcc.edu/mcleod/css/videos/flash/v2/css-hybrid-v2-selection.html">Hybrid Video #2 (Flash)</a> (43 min)</p>
+<p>If you have trouble viewing that version of the video, and instead you want to  view  the closed-captioned alternative version of this video, read how to do so <a href="http://www.faculty.rcc.edu/mcleod/css/handouts/about_closedcaptioned_videos.html" target="_blank">here</a>.</p>
+<p>Link to the data files (.zip file): <a href="http://www.faculty.rcc.edu/mcleod/css/videos/css_video_2_selection.zip">Data files for Video #2</a></p>
+<p>Optional Link to the editor (version 3.5) used in the video: <a href="http://www.faculty.rcc.edu/mcleod/css/resources/csehtml_validator_lite_v3.5.exe">CSE HTML Validator Lite</a></p>
+<p>By doing what the video does, you will be styling an online resume page. A variety of selection techniques are demonstrated to style different pieces of the resume effectively. </p>
+<p>Note that you should insert your own first and last name in place of "Joe Student" in all 3 places where they appear in the resume file used in the video. That means replacing it in the "title", in the main "h1" heading, and in the last "p" paragraph. In the "h1" heading, your first and last initials should end up within the "span" tags instead of  "J" and "S". </p>
+<p>After completing the video work and achieving an identical looking resume page to that shown and validated at the end of the video (except for your name instead of Joe Student), you are ready to prepare your work for submission. <br>
+</p>
+<h3>What to Submit for this assignment part 1:</h3>
+<ol>
+  <li>Open the "resume" page in a browser. Make sure your full name shows up as described above. Capture a screen shot of your page displaying in the browser and paste it into   the appropriate  part 1 location within the given Word file that you downloaded from Blackboard. Note that if your page is too long to fit on a single screen shot, take and paste one screen shot of the top of the page and a second one of the bottom of the page.</li>
+  <li>From within your editor, copy all of the  code  for the "resume" page (from the top of the HTML file to the very bottom), which contains both HTML and CSS, and paste it into the code area for part 1 within your Word file). Be sure that all of the page's code shows up and is formatted appropriately (remove extra tabs if they are causing any code to right align.) <br>
+     <br>
+  </li>
+</ol>
+
+<h2>Part 2: Selectors (Chapter 3 Tutorial)<br>
+30 Points</h2>
+<p>For this part, you'll be asked to do various tasks related to the tutorial towards the end of  chapter 3 of the textbook. </p>
+<ol>
+   <li>First, read through and familiarize yourself with all of the various types of selectors outlined in the first part of the chapter on pages 41-70. Although it is pretty technical stuff, it is critically important to your future CSS success, so give it the time and effort that it requires. Make sure you understand each example given. The selection techniques discussed on pages 42-56 are the most commonly used and must be mastered for you to have success in this class. The others discussed on pages 57-70 are good to know but not as critical right now. </li>
+   <li>When you are done reviewing the material indicated above, continue on to do the "Tutorial: Selector Sampler", on pages 70-83. </li>
+   <li>When you complete the tutorial, there are a few more changes you need to make to produce the final result. The additional changes  are marked with red arrows on the final screen shot that represents the goal of your work. Follow the instructions below to guide you through these changes. <br>
+     <br>
+     The word "NOTE:" in the 2 darker green boxes are ok  being either orange or white depending on the edition of the book you are using. 
+<br>
+     <br>
+     <img src="./CSS Assignment #2_files/a2p2-ps.gif" width="640" height="512" alt=""><br>
+      <br>
+      <ol>
+         <li>With the "selector_basics.html" file open in your editor of choice, locate the "h1" heading. Replace the words "The Amazing" with your own first and last name. (In the screen shot shown above, that h1 heading appears with "Joe Student" but yours should have your own name there.)</li>
+            <li>While you are still working with that "h1" heading, locate the last word of this heading, "CSS". Surround the text "CSS" with "span" tags (opening span tag before "CSS" and closing span tag after it). This will allow us to later write a rule to style that text uniquely, as you can see in the screen shot above.</li>
+            <li>Next locate the "h2" heading for "Who Knew CSS Had Such Power?". Then locate the word "CSS" in the text within that heading and surround it with "span" tags as you did for the "h1" heading above. </li>
+            <li> Now we are ready to make some changes to the CSS style rules that control the formatting for this page. Locate the "style" section of the code toward the top of the file. First we will add a new style to format the text "CSS" in the "h1" and "h2" headings. Since this Web page is all about glorifying the amazing world of CSS, let's emphasize this "CSS" text a little more. We would like to write just one single style rule that formats the "CSS" text within both headings at the same time. To do so, we will have to come up with a selector that can target the "span" tags inside these headings. To target the spanned text inside the h1, we could use the selector "<strong>h1 span</strong>". That selector targets any span that is inside an h1. Likewise, to target the spanned text inside the h2, we could use the selector "<strong>h2 span</strong>". But since we want to format the two areas identically (same styles), we need to combine these two selectors. Just like the existing selector "h1, h2, h3" combines 3 separate heading selectors into one using commas to apply a single set of formatting to all 3 headings, we can combine our two selectors into one like this: "<strong>h1 span, h2 span</strong>". So using that as our new selector, let's write a new rule into our style sheet to format those spans.
+                   
+            Place the new style rule just below the existing "h1, h2, h3" style rule and just above the existing ".note" style rule. The first property we are going to set in order to emphasize this text is "color". To make the text stand out and to tie it in with the "pinkish" color at the top of the page, we will set its color to the same as the background of the logo, #rgb(191, 91, 116) as shown below:<br>
+            <br>
+            <img src="./CSS Assignment #2_files/a2p2csscodesnippet7.gif" width="316" height="75" alt=""><br>
+            <br>
+            Test your page in the browser and you should see that the "CSS" in both the "h1" and "h2" headings has its new intended pinkish color.  If not, double check that you wrote the CSS rule properly and that you wrote the "span" tags properly. Try validating your HTML and your CSS if you have difficulty troubleshooting your problems. Once you have success, continue to the next step.</li>
+            <li>To finish off the changes to these heading spans, we will increase their font size, increase the spacing between the C-S-S letters, and add some silver colored text shading. These affects should combine to make the text really stand out nicely (as shown in the screen shot above). This  sounds good, but one challenge we face with trying to do these changes to the h1 and h2 text all at once is  the fact that the h1 text is bigger than the h2 text and the changes we make -- especially to the font-size -- have to respect that difference. To so, we will use "relative" units on all our property values such as "%" units or "em" units rather than "absolute" units such as  "pt" for points. That way, the changes will be bigger on the bigger text and smaller on the smaller text, all based on the existing sizes. This will be true of the letter spacing and shadowing affects too, so that the amount of spacing we add between the letters and the size of the shadow is relative to how big the letters are to begin with. With that in mind, add the following declarations so that the overall rule looks like this: <br>
+              <br>
+              <img src="./CSS Assignment #2_files/a2p2csscodesnippet6.gif" width="524" height="139" alt=""><br>
+              <br>
+            The font-size declaration  makes the "CSS" text 35% larger than its surrounding text (regardless of how big it currently is). The second new declaration  adds one tenth (.1em)  of the current font size in that area to the spacing between the "C", "S", and "S" (so the bigger the text is to begin with, the more space is put between the letters.) And finally the third new declaration adds the silver text shadowing to give the "CSS" letters a 3D affect. The negative first number (-.07em) puts the shadowing on the left (a positive number moves it to the right) the positive second number (.07em) puts the shadowing below the letters (a negative number moves it above the letters), the third number indicates the width or blur of the shadow, and the last property is for the color of the shadow (silver in this case.) Since "em" units are being used,  the bigger the letters, the bigger the shadowing -- so the shadowing on our h2 will be smaller than the shadowing on our h1, thus keeping the look proportional and natural.  Using pixels instead of ems might seem easier to deal with, but the results would not be pleasing to the eye because they would not be proportional. But don't worry too much about all of these property details -- try to  keep your focus on what really matters here -- the selection techniques. Make sure you understand the "h1 span, h2 span" selector. You will have plenty of time in future chapters to obsess over these property settings!  <br>
+               <br>
+            Save your file and test it in the browser. You should see the same affects as in the screen shot if you wrote your CSS correctly and are using a recent browser (text shadowing in particular requires a recent browser.) </li>
+            <li>Next, we are going to lighten up the background color of the page. Unfortunately, we can't go too light or we will have to change several other color settings just to be able to read the text. With that in mind, locate the "body" selector rule and find the setting for the background color. Replace the exsiting background color, "rgb(50,122,167)", with the color "darkseagreen" (it isn't very dark, despite its misleading name), as shown below:<br>
+              <br>
+            <img src="./CSS Assignment #2_files/a2p2csscodesnippet4.gif" width="419" height="57" alt="">            <br>
+            <br>
+            Keep all other existing declarations for the body 
+            intact below the background-color declaration, just change the background color value.<br>
+            <br>
+        </li>
+            <li>Lastly, it is time to apply some changes to the border surrounding the "notes" on the page. Find the ".note" style rule in the existing page's style sheet. We are going to add a little punch to the left hand side of the note box border and tie in the pinkish color at the top of the page at the same time. <br>
+              <br>
+              At the bottom of this ".note" style rule (just below the "padding: 20px;" declaration) but above the closing "}", add the following declaration:<br>
+              <br>
+              <img src="./CSS Assignment #2_files/a2p2csscodesnippet5.gif" width="493" height="42" alt=""><br>
+               <br>
+            Save your changes and test your updated page in the browser. You should see the new thick pink left border on  both of the note areas on the page (as shown in the sample screen shot above). Verify that your page is looking good in the browser. If not, double check your work against the code shown above. Validating your CSS code is recommended. Once you get things looking good, it is time to get your work ready to turn in.</li>
+     </ol>
+   </li>
+   <li>
+      <p>Note that before you turn anything in, it would be a good idea to copy/paste your style rules (everything inside the "style" tags) into the W3C CSS Validator to ensure that all of your code is as good as can be. </p>
+   </li>
+   <li>
+      <p>After completing the tutorial work  and the steps above, you are ready to create your screen shot and code pastings. <br>
+      </p>   </li>
+</ol>
+<p>&nbsp;</p>
+      <h3>What to Submit for this assignment part 2:</h3>
+      <ol>
+        <li>Open the "chapter 3 tutorial" page in a browser. It should include all of the changes above which are shown in the sample screen shot above. Make sure your full name shows up in the heading toward the top of the page instead of "Joe Student".  Capture a screen shot of your page displaying in the browser and paste it into   the appropriate  part 2 location within the given Word file that you downloaded from Blackboard. Note that if your page is too long to fit on a single screen shot, take and paste one screen shot of the top of the page and a second one of the bottom of the page.</li>
+        <li>From within your editor, copy all of the  code  for the "chapter 3 tutorial" page (from the top of the HTML file to the very bottom), which contains both HTML and CSS, and paste it into the code area for part 2 within your Word file). Be sure that all of the page's code shows up and is formatted appropriately (if any of your code is aligning to the far right hand side of the page, remove any extra tabs to the left of that code that might be  causing it.) </li>
+      </ol>
+     
+
+<p>&nbsp;</p>
+<h2>Part 3: Font &amp; Text Properties (Hybrid Video #3)<br>
+  30 Points</h2>
+<p>For this part of the assignment, you are asked to watch, listen, and do the same steps as are done in the "font and text properties" ("Daily Spin" web page) hybrid video #3. The links to this hybrid video itself, to the data files you'll need, and to the code editor that is used appear below. Downloading and installing the code editor is optional but recommended if you want to easiest way to duplicate the code created in the video. But before you attempt to access this video, you should first read the "<a href="http://www.faculty.rcc.edu/mcleod/css/handouts/about_hybrid_videos.html" target="_blank">About Hybrid Videos</a>" document so you are sure to be experiencing the video as it was intended. </p>
+<p>Link to the Flash movie version of the video: <a href="http://www.faculty.rcc.edu/mcleod/css/videos/flash/v3/css_video_3_fonttext.html">Hybrid Video #3 (Flash)</a> (67min)</p>
+<p>If instead you want to  view  the closed-captioned version of this video, read how to do so <a href="http://www.faculty.rcc.edu/mcleod/css/handouts/about_closedcaptioned_videos.html" target="_blank">here</a>.</p>
+<p>Link to the data files (.zip file): <a href="http://www.faculty.rcc.edu/mcleod/css/videos/css_video_3_fonttext.zip">Data files for Video #3</a></p>
+<p>Link to the editor (version 6.5) used in the video: <a href="http://www.htmlvalidator.com/lite/">CSE HTML Validator Lite</a></p>
+<p>By doing what the video does, you will be styling a typical blog page, with several partial blog entries and (fake) links to the complete blog entries as well as a set of (fake) links to the rest of the (fake) site. Since our page has no graphics, our challenge will be to use as many of font and text properties as we can to enhance the appearance of the page to end up with a visually interesting, elegant, and highly readable result. </p>
+<p>Note that you should insert your own first and last name in place of "Joe Student" in all 3 places where they appear in the page used in the video. That means replacing it in the "title", in the main "h1" heading, and in the footer "p" paragraph. </p>
+<p>After completing the video work and achieving an identical looking blog page to that shown (except for your name), validate both your HTML and CSS separately as follows. </p>
+<ul>
+  <li>Validate your completed XHTML either within the CSE HTML Validator  or online at the <a href="http://validator.w3.org/">W3C's  HTML validator</a>. Fix any errors that are found. </li>
+  <li>Validate your completed CSS by using the online <a href="http://jigsaw.w3.org/css-validator/validator-text.html">W3C CSS validator</a>. Fix any errors that are found. </li>
+</ul>
+<p>After replacing your name in all 3 places and validating both your XHTML and your CSS as indicated above,  you are ready to prepare your work for submission. </p>
+<h3>&nbsp;</h3>
+<h3>What to Submit for this assignment part 3:</h3>
+<ol>
+  <li>Open the "Daily Spin" page (daily_spin.htm) in a browser. It should include your name in place of Joe Student, and both your HTML and CSS should be validated as recommended above.   Capture a screen shot of your page displaying in the browser and paste it into   the appropriate  part 3 location within the given Word file that you downloaded from Blackboard. Note that if your page is too long to fit on a single screen shot, take and paste one screen shot of the top of the page and a second one of the bottom of the page.</li>
+  <li>From within your editor, copy all of the  CSS code  for the "daily_spin<strong>.CSS</strong>" file -- <strong>NOT</strong> "daily_spin<strong>.HTM</strong>". There should not be ANY HTML in this code. Be sure that you are turning in CSS and not HTML! Paste the CSS code from "daily_spin.css"  into the code area for part 3 within your Word file. Be sure that all of the page's code shows up and is formatted appropriately (if any of your code is aligning to the far right hand side of the page, remove any extra tabs to the left of that code that might be  causing it.) </li>
+</ol>
+<h2>&nbsp;</h2>
+<h2>Part 4:  Formatting Text (Chapter 6 Tutorial)<br>
+   30 Points</h2>
+<p>For this part, you'll be asked to do various tasks related to the tutorial towards the end of  chapter 6 of the textbook. </p>
+<ol>
+   <li>First, read through and familiarize yourself with  the various properties and issues associated with styling text in the first part of the chapter on pages 121-172. Although it is pretty long, it is very useful material and worthy of some attention. I suggest browsing pages 121-147 more quickly, getting a feel for fonts and why Web fonts are helpful, and then focusing more attention on the properties described on pages 147-172. These pages cover more useful properties in less pages.</li>
+  <li>When you are done reviewing the material indicated above, continue on to do the "Tutorial: Text Formatting In Action", on pages 172-184. But before you follow the steps on those pages, note the following issues detailed in the next several steps:</li>
+   <li>     When you reach page 174, and you are asked to type up all that font related code on step 6, it is recommended that you copy and paste the code as suggested in step 6. </li>
+   <li>At some point during the tutorial, replace the name "Rod Dibble" with your own full name in that 3rd line of the page. </li>
+   <li>If your page ends up with&nbsp;a yellow "The Missing Manual" heading&nbsp;instead of the orange one shown in the screen shot below that is&nbsp;fine. Other minor color differences are&nbsp;ok&nbsp;too. </li>
+   <li>If your main "PTSans" font doesn't look right in the browser (your font doesn't look at all like the screen shot below), then it is probably not your fault. Find the CSS rule that looks like this: <br>
+   "html&nbsp;{ font-family:&nbsp;PTSans, &nbsp;...}" <br>
+   ...and just rename that&nbsp;PTSans&nbsp;font to&nbsp;"PTSansBad" (or to something else) and the browser will ignore it and use the next font in your font list which will look much better.</li>
+   <li>After completing  the tutorial, there are a few more changes you need to make to produce the final result.  Follow the instructions below to guide you through these changes.</li>
+   <li>First, we are going to widen the layout a bit and allow the "CSS" and "The Missing Manual" parts of the "h1" to sit side by side instead of overlapping on top of one another. To do so, make the following adjustments:
+      <ol>
+         <li>Locate the ".main" style rule and modify the "width" property value from 740 to 800 pixels wide. (That extra 60 pixels width will create more room for the text to sit side by side.)</li>
+         <li>Locate the ".main h1 strong" style rule and delete the declaration inside that sets the negative margin-right (that setting was causing the overlapping and is no longer wanted.)</li>
+         <li>Save your work and test your results in the browser. Now you should see the entire "CSS The Missing Manual" heading stretch across a single line without any overlapping of these words, as shown in the sample screen shot below (as pointed to by the top-most red arrow.)</li>
+      </ol>
+   </li>
+   <li>Next we will focus a little further attention upon the unordered (bulleted) list that was floated to the right hand side of the page. We will increase the line height of each list item (line) so that it takes up more vertical space so it  comes closer to matching the overall height of the paragraph  to its left. 
+      Then we will add a graphical "blue diamond" bullet to replace the 
+      current standard square bullet.
+      <ol>
+         <li>Locate the ".main li" style rule in your existing "style" section. Below the 3 existing declarations add a  4th declaration to set the "line-height" to "1.75em". This should put the desired amount of extra vertical spacing between each list item as described above.</li>
+         <li>Save your work and test your results in the browser. The 6 bulleted list items should take up noticeably more vertical space now that they used to and more closely match the height of the paragraph to its left (as shown in the sample screen shot below and pointed to by the third arrow down the page.) Next we will add the graphical bullet.</li>
+         <li>Now that there is more room between each bulleted item, we also have more room to place a graphical bullet in place of the smaller standard squares that were set earlier. To do so, first download the image linked to below (right click it) and save it into the same folder as your Web page. Keep the file's name, "blue-arrow-bullet.gif", intact as you download/save it.<br>
+           <br>
+           <img src="./CSS Assignment #2_files/blue-arrow-bullet.gif" alt="Blue arrow bullet" width="25" height="13">&nbsp;&nbsp;&nbsp;&nbsp;<a href="./CSS Assignment #2_files/blue-arrow-bullet.gif"> blue-arrow-bullet.gif</a><br>
+         <br>
+         </li>
+         <li>With the image file in the same folder as the Web page you are editing, locate the style rule with the selector ".main ul". Below its  3 existing declarations, add this 4th declaration to bring  our blue arrow bullet image into play:<br>
+            <br>
+            <img src="./CSS Assignment #2_files/a2p4csscodesnippet1.gif" alt="assignment 2 part 4 code snippet" width="616" height="37"><br>
+            <br>
+         </li>
+         <li>Save your work and test your results in the browser. You should now see a little blue arrow next to each list item where the squares used to be (as shown in the sample screen shot below and pointed to by the third arrow down the page.) If not, double check the location of the file, its name on disk, its name  in the style rule, etc.  You can also try to validate your styles to find possible mistakes as needed. </li>
+      </ol>
+   </li>
+   <li>
+      <p>Lastly, we will spread out the characters and words that make up your own name (right next to the "november 30" on the 3rd line of the page). Before we begin, review the examples in the book on pages 159 and 160 for modifying the letter-spacing and word-spacing properties.</p>
+      <ol>
+         <li>Your name  (which originally was "Rod Dibble")  is inside "strong" tags which itself is inside a paragraph ("p" tag) that has  a class name of "byline" in the html. As such, to target this area, we might use the selector ".byline strong". But since in this tutorial it has already been targeted for other styles using the (more complicated) selector ".main .byline strong", we will use that existing rule. Locate this rule in your style section -- it has 3 existing declarations: one each for color, text-transform, and margin-left. <br>
+            <br>
+            Add a 4th declaration to this rule to further spread out the letters of your name by 5px. <br>
+         Add a 5th declaration to this rule to further spread out the words of your name by 10px.</li>
+         <li>Save your work and test your results in the browser. You should now see the letters and words of your name more spread out (as shown in the sample screen shot below and pointed to by the 2nd arrow down the page.)<br>
+            <br>
+         </li>
+      </ol>
+   </li>
+   <li>
+      <p>After completing the tutorial work  and the additional changes indicated above, your page should look very similar to the screen shot shown below (minus the red arrows and with yellow or gold colored text instead of orange). If so, you are ready to prepare your work for submission. <br>
+         <br>
+         <img src="./CSS Assignment #2_files/ps-a2p4.jpg" alt="Assignment 2 part 4 final screenshot" width="640" height="616"></p>
+      <h3>&nbsp;</h3>
+   </li>
+</ol>
+<h3>What to Submit for this assignment part 4:</h3>
+<ol>
+  <li>Open your completed "chapter 6 tutorial" page in a browser. It should look very similar to the screen shot shown above, but should include your name in place of Joe Student (which is pointed to by one of the red arrows above).    Capture a screen shot of your page displaying in the browser and paste it into   the appropriate  part 4 location within the given Word file that you downloaded from Blackboard. Note that if your page is too long to fit on a single screen shot, take and paste one screen shot of the top of the page and a second one of the bottom of the page.</li>
+  <li>From within your editor, copy all of the  code  for this chapter 6 tutorial page. It is an HTML file that includes some CSS, so your copied code should be a combination of HTML and CSS. Paste this code   into the code area for part 4 within your Word file. Be sure that all of the page's code shows up and is formatted appropriately (if any of your code is aligning to the far right hand side of the page, remove any extra tabs to the left of that code that might be  causing it.) </li>
+</ol>
+<h2></h2>
+<h2>Part 5: Final Project Theme<br>
+  15 Points</h2>
+<p>For this part of the assignment, you are asked to decide on a theme for your eventual final project. The final project involves taking a given unstyled generic 6-page Hotel Web site and using CSS to format the site according to a specific theme. So you should choose a visually rich theme that will
+give you a clear direction for your eventual styles (colors, background images, fonts, etc.).  Once you decide on the theme of the hotel, pick a hotel name based on that. For example, if you are going with a Spider-man theme, the hotel name could be "The Spider Manor", or "The Spider-man Motel". Be creative and choose a theme and a hotel name that will be fun for you to work with. It should not be a hotel that already exists, but it should be a hotel theme that would probably be very fun and visual graphic experience to visit if it did exist. </p>
+<p>To get some ideas for possible themes, check out the <a href="http://www.faculty.rcc.edu/mcleod/css/handouts/finalproject_printscreens.html" target="_blank">final project printscreen gallery</a>. There you'll see several previously used themes by students in this class. You cannot use any of these specific themes, but you can get some great ideas for similar types of themes. Also, at the very bottom of this screen shot theme gallery page, you will  see some suggested themes listed. If you can't think of a theme on your own, you can use one of the suggested themes listed there. Or you use one of those suggested themes to  come up with something similar.</p>
+<p>After previewing the themes within that gallery, you can see that themes involving fantasy and rich imagery work very well. Choose a theme that has a lot of recognizable graphics images that are available on the Web for you to "borrow" for use as photos, backgrounds, bullets, buttons within the hotel site. Also be as specific as possible with your theme -- for example, rather than choosing  "The Candy Cottage", choose something more specific like "The M&amp;Ms Motel" because then you'll have more specific M&amp;M related images,  colors, and fonts to  use in your site to capture that specific theme and bring it to full life.</p>
+<p>Here's what you need to think about,  decide upon, and enter into the part 5 area of your Blackboard submission file to get full credit for this part.</p>
+<p><strong>CSS A2P5 Theme</strong></p>
+<ol>
+   <li><strong>Your  full name </strong></li>
+   <li><strong>Your Hotel's name</strong></li>
+   <li><strong> Explanation of theme </strong></li>
+   <li><strong>Hotel Image</strong></li>
+   <li><strong>Color Scheme</strong></li>
+   <li><strong>Fonts</strong></li>
+   <li><strong>Bullet Images</strong></li>
+</ol>  
+ <p>For example, if you were going to do a Spiderman themed hotel, your entries could be similar to the following. If you don't have an image to insert into the Word file, you can describe the image in words, as was done for the Spiderman hotel below:</p>
+ <p>1. Your full name: <strong>Joe Student</strong></p>
+ <p>2. Your Hotel's name: <strong>The Spider Manor</strong></p>
+ <p>3. Explanation of theme: <strong>Theme is based on "Spiderman", the main super hero character of the comic book  and movie series.</strong></p>
+<p>4. Hotel Image: <strong>Hotel will be a red and gray brick multi-story building with Spiderman climbing up the side of it. </strong></p>
+<p>5. Color Scheme: <strong>red, blue, black, gray and white will be the dominant colors, something like this:</strong> <img src="./CSS Assignment #2_files/spiderman-color-scheme.png" width="313" height="47" alt=""></p>
+ <p>6. Fonts: <strong>"The Amazing Spiderman" and "Spiderman" fonts, shown below, are both available free at "www.fontspace.com/spiderman" and are shown below. They will be used for headings only. Main text will be general comic book style and basic sans-serif fonts:</strong></p>
+ <p><img src="./CSS Assignment #2_files/spiderman-fonts.jpg" width="457" height="58" alt=""></p>
+ <p>7. Bullet Images: <strong>Small spiders will be used, something like these:</strong> <img src="./CSS Assignment #2_files/spider.png" width="34" height="32" alt=""> <img src="./CSS Assignment #2_files/spider-bullet2.gif" width="24" height="24" alt=""></p>
+ <p>&nbsp;</p>
+ <h3>What to Submit for this assignment part 5:</h3>
+ <ol>
+   <li>Just fill out the part 5 area of the Word document in a fashion similar to what is shown above. You can paste images (into the Word file) that are copied from the internet or saved from the the internet or from a graphics program such as Photoshop as needed. Google image searches can help you find images that might work as a  hotel starting point, as bullet images, or whatever. Search font sites such as fontspace.com, dafont.com, myfonts.com, fontsquirrel.com, urbanfonts.com, etc., to find at least one font that is specific to your theme. Note that any missing (or unacceptable) entries in this list of 7 items will be cause for point deductions. Note that your feedback for this part may include requirements that you change something, further develop something, or even choose a different theme entirely if the one you picked is inappropriate or was already chosen by someone else before you (based on assignment submission times).</li>
+ </ol>
+<p>&nbsp;</p>
+<h2>Part 6: Test Your Knowledge Of Selectors<br>
+  15 Points</h2>
+<p>In this last part, 
+  carefully answer the questions below, which are based on the material in chapter 3 of our textbook and covering parts 1 and 2 of this assignment (selectors). Selection techniques are very important. Selection skills are your key to future success in formatting your Web pages. Because of this, I have deliberately chosen some challenging questions to test your skills here.   Your answers should not  be guesses nor should  they  be copied off another student -- you should try each of these in the given test page below linked to below and  by doing so determine what answers work and what answers don't and why. If you just guess, you will likely miss more than you expect and learn nothing in the process!<br>
+  <br>
+So, use the specially prepared Web page (see the link below) to test out the given questions and answers so that you will know for sure which answers are correct and understand how and why they work. You may need to review your html for tables and/or forms for some of these questions too.</p>
+<p>Note that the questions below appear within your Word assignment submission file and should be answered there by bolding and highlighting as usual (don't try to copy these questions into that Word file). They appear below also just for your reference and convenience.<br>
+  <br>
+  Download and edit this test page to help you answer the questions below: <a href="http://www.faculty.rcc.edu/mcleod/css/handouts/a2p6-test.html" target="_blank">a2p6-test.html</a> <br>
+  <br>
+</p>
+<ol>
+   <li>If you want to create a style rule to  format  just the list items of bulleted lists (not of ordered lists), which selector would do the job?
+      <ol class="answers code">
+            <li>.ul .li</li>
+            <li>ul, li</li>
+            <li>ul li</li>
+            <li>li ul</li>
+            <li>li, ul</li>
+      </ol>
+   </li>
+   <li>If you are writing a style rule to format a copyright paragraph  differently from all other paragraphs on your page, which selector makes the most sense to use?
+     <ol class="answers">
+       <li class="answers code">p</li>
+       <li class="answers code">.copyright</li>
+       <li class="answers code">p .copyright</li>
+       <li class="answers code">#copyright</li>
+         <li class="answers code">p #copyright</li>
+      </ol>
+   </li>
+   <li>If you use the selector "<span class="code">nav+a</span>", what would you be selecting?
+      <ol class="answers">
+            <li>The nav area plus all links after the nav </li>
+         <li>The nav area plus the first link after the nav </li>
+         <li>Just the first link inside the nav area</li>
+         <li>Just the first link after the nav area only if it is the very next tag</li>
+         <li>Just the first link after the nav area regardless of where it is</li>
+      </ol>
+   </li>
+   <li>In a form with 3 text boxes, 4 radio buttons, 2 text areas (that can hold multiple lines of text), and one submit button, how many  elements would be affected by the selector "<span class="code">input</span>"?
+      <ol class="answers">
+      <li>10</li>
+      <li>9</li>
+      <li>8</li>
+      <li>7</li>
+      <li>3</li>
+     </ol>
+   </li>
+   <li>In a form with 3 text boxes, 4 radio buttons, 2 text areas (that can hold multiple lines of text), and one submit button,  how many elements would be affected by the selector "<span class="code">input[type="text"], input[type="button"]</span>"?
+      <ol class="answers">
+       <li>10</li>
+       <li>7</li>
+       <li>6</li>
+       <li>5</li>
+       <li>3</li>
+     </ol>
+   </li>
+   <li>In a table with 5 rows, and 5 columns, which table cells  would be affected by the selector "<span class="code">td:last-child</span>"?
+     <ol class="answers">
+       <li>None of the cells would be affected</li>
+       <li>The 5 cells across the last row would be affected</li>
+       <li>The 5 cells down the last column would be affected</li>
+       <li>Just the last cell in the last column would be affected</li>
+       <li>All 25 cells would be affected</li>
+     </ol>
+   </li>
+   <li>In a table with 5 rows, how many of those rows would be affected by the selector "<span class="code">tr:nth-child(3n+1)</span>"?
+  <ol class="answers">
+    <li>1 row would be affected</li>
+    <li>2 rows would be affected</li>
+    <li>3 rows would be affected</li>
+    <li>4 rows would be affected</li>
+    <li>5 rows would be affected</li>
+  </ol>
+   </li>
+   <li>In a table with 5 rows and 5 columns, how many table cells would be affected by the descendant selector "<span class="code">tr:nth-child(odd) td:nth-child(even)</span>"?
+     <ol class="answers">
+          <li>25</li>
+         <li>19</li>
+         <li>15</li>
+         <li>6</li>
+         <li>0</li>
+      </ol>
+   </li>
+</ol>
+<h3>&nbsp;</h3>
+<h3>What to Submit for this assignment part 6:</h3>
+<p>Answer these same above questions which appear inside the assignment's Word submission file that you download from Blackboard. Inside that file, you will indicate your answers  by bolding and highlighting your answers as instructed to do there.</p>
+<h3>&nbsp;</h3>
+
+
+</body></html>

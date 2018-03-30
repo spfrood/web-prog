@@ -1,0 +1,131 @@
+/* Screen Specific Webmaster Resources Detail Styles */
+/* Written by Scott McLeod */
+
+body
+{	font-size: 105%;
+	background-color: #550000; 
+	color: #DDDD77;
+	font-family: Verdana, Arial, sans-serif;
+	margin: 10px 5% 0 5%;
+}
+
+h1, h2, h3
+{	color: #FFFFCC;
+	font-family : "Felix Titling", "Copperplate Gothic Bold", Georgia, "New York", serif;
+}
+
+h1
+{	font-size: 1.7em;
+	letter-spacing: 1px;
+}
+
+h2, h3
+{	margin-top: 0.6em;
+	margin-bottom: 0;
+}
+
+h2
+{	font-size: 1.5em;
+}
+
+h3
+{	font-size: 1.3em;
+}
+
+h4, h5, h6
+{	font-size: 1.15em;	
+	font-family: Georgia, "Book Antiqua", "New York", serif;
+	color: #CCCC66;
+}
+
+h6
+{	font-size: 1.1em;
+}
+
+p
+{	margin-top: 0.1em;		/* this is for IE6- that can't do "h1 + p" */
+} 
+
+h1 + p, h2 + p, h3 + p
+{	margin-top: 0.1em;
+}
+
+p, div
+{	line-height: 1.3em;
+}
+
+b, strong
+{	color : #FFFFDD;
+	font-weight: normal;
+}
+
+ul li, ol li
+{	margin-top: 10px; }
+
+ul
+{	list-style-type: square;
+	list-style-image: url(dw/bullet1a.gif);
+}
+
+ol
+{  list-style-type: decimal;
+}
+
+
+ul ul li, ol ol li
+{	margin-top: 8px;
+}
+
+ul ul
+{  list-style-type: circle;
+	list-style-image: url(dw/bullet2a.gif);
+}
+
+
+	
+.printout
+{	color : #FFFFDD;
+	font-weight: bold;
+}
+	
+.rcc
+{	color: #CCCC66;
+	text-align: right;
+	margin: -.75em 0 .5em 0;
+	font-size: .75em;
+}
+
+a:link
+{	color: #FFFFDD;
+}
+
+a:visited
+{ 	color: #FFFFCC;
+}
+	
+a:active
+{	color: #CCCCFF;
+}
+
+a:hover
+{	color: white;
+}	
+
+div.menu 
+{ 	background-color: #300; 
+	margin: -10px -6% 10px -6%;
+	padding: 0 6% 3px;
+}
+
+div.menu a, div.menu a:visited
+{	font-size: .6em;
+	color: #CC6;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 3px 3px;
+}
+
+div.menu a:hover
+{	color: #FFC;
+	background-color: #404028; 
+}

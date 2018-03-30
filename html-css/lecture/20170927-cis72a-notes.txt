@@ -1,0 +1,21 @@
+Forms in HTML
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Feedback Form</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Give us your feedback</h1>
+		<p>Please fill out our feedback forma nd send it in. We will appreciate your comments and respond accordingly.</p>
+	</body>
+</html>

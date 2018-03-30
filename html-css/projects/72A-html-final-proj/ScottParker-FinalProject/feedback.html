@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Scott Parker's Final Project Feedback</title>
+    <link href="layout.css" type="text/css" rel="stylesheet">
+
+    <!-- Add a link to your own style sheet here  -->
+    <link href="project.css" type="text/css" rel="stylesheet">
+
+    <!--
+	Final Project by Scott Parker
+-->
+
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="logo.png" alt="Logo Image" />
+    </header>
+    <nav>
+        <p><a href="index.html"><img id="home_button" src="home.jpg" alt="Home Button" /></a></p>
+        <p><a href="favlinks.html"><img id="links_button" src="links.jpg" alt="Links Button" /></a></p>
+        <p><a href="resume.html"><img id="resume_button" src="resume.jpg" alt="Resume Button" /></a></p>
+        <p><a href="other.html"><img id="about_button" src="about.jpg" alt="About Button" /></a></p>
+        <p>FEEDBACK</p>
+    </nav>
+
+    <div id="main">
+        <h1>Feedback</h1>
+        <p>It has been a pleasure to host you on this brief adventure! However, as was said by SemiSonic, "You don't have to go home, but you can't stay here." It's been fun but the last call has come and gone and now it's time to pay the piper. Don't let the door hit you as you leave. And maybe in rare cases, I hate to see you go but love to watch you leave.</p>
+
+        <form id="feedbackform" method="get" action="thankyou.html">
+
+            <p>To let us know how you felt about the experience please complete the following survey. </p>
+
+            <fieldset>
+                <legend>Who are you?</legend>
+                <p>First Name: <input name="firstname" type="text" size="25" /><br /> Last Name: <input name="lastname" type="text" size="25" /><br /> E-mail Address: <input name="email" type="text" size="25" /></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Best Part</legend>
+                Select the page you thought was best: <br />
+                <input name="bestpage" type="checkbox" value="home" />Home &nbsp;
+                <input name="bestpage" type="checkbox" value="links" />Links &nbsp;
+                <input name="bestpage" type="checkbox" value="resume" />Resume &nbsp;
+                <input name="bestpage" type="checkbox" value="about" />About &nbsp;
+                <input name="bestpage" type="checkbox" value="feedback" />Feedback
+
+                <p>What will you do after this?
+                    <br /><input name="followup" type="radio" value="none" required />None of your business! <br />
+                    <input name="followup" type="radio" value="html" />Take an HTML course <br />
+                    <input name="followup" type="radio" value="css" />Take a CSS course <br />
+                    <input name="followup" type="radio" value="juggle" />Learn to juggle <br />
+                    <input name="followup" type="radio" value="game" />Get into gaming <br />
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Best Pictures</legend>
+                <p>Favorite image on the site:
+                    <select name="favimage">
+                <option>Header-logo</option>
+                <option>Costumes</option>
+                <option>Sharpie</option>
+                <option>Alligator</option>
+                </select>
+                </p>
+            </fieldset>
+
+            <br />Is there anything you would like to add?
+            <br /><textarea name="other" rows="3" cols="100"></textarea>
+
+            <p><input type="submit" value="Submit" />
+                <input type="reset" value="Reset" /></p>
+
+            <br />
+            <p>Thank you for your completing the survey.</p>
+        </form>
+
+        <footer>
+            <p>Feedback page created by Scott Parker</p>
+        </footer>
+    </div>
+</body>
+
+</html>

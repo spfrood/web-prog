@@ -1,0 +1,285 @@
+/* Basic Styles for Mountain Top Travel by Scott Parker */
+
+/* General Page Styles */
+
+/* =================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 100%;
+    color: black;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+/* Heading Styles */
+
+/* ============== */
+
+h1 {
+    font-family: Elephant, Broadway, "Britannic Bold", "Cooper Black", serif;
+    font-size: 1.8em;
+    font-style: italic;
+    text-align: left;
+    padding: 0 0 0 30px;
+    margin: 0;
+    height: 80px;
+    line-height: 80px;
+}
+
+h2 {
+    font: bold 1.65em Georgia, "MS Serif", "New York", serif;
+    color: #636;
+    margin-bottom: -14px;
+}
+
+.biginitial {
+    font: italic bold 1.75em Elephant, Broadway, "Britannic Bold", "Cooper Black", serif;
+    color: #636;
+    vertical-align: middle;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #636;
+}
+
+h4 {
+    font-size: 1.0em;
+}
+
+h5,
+h6 {
+    font-size: 0.9em;
+}
+
+
+/* Breadcrumbs Styles */
+
+/* ================== */
+
+#breadcrumbs {
+    margin: 0;
+    padding: 0 0 0 20px;
+    color: #BCB;
+    font: bold .75em/1.3 Verdana, "Trebuchet MS", Geneva, Arial, sans-serif;
+}
+
+#breadcrumbs a:link,
+#breadcrumbs a:visited {
+    color: #9A9;
+    text-decoration: none;
+    padding: 0 1px;
+}
+
+#breadcrumbs a:hover,
+#breadcrumbs a:active {
+    color: #404;
+    background-color: #9A9;
+    text-decoration: none;
+    padding: 0 1px;
+}
+
+
+/* Main Column Styles  */
+
+/* =================== */
+
+#main {
+    margin: 0 140px 0 150px;
+    font-weight: bold;
+    font-size: .8em;
+    padding: 0 20px 20px 20px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+img.inset {
+    border: 2px inset #F6F;
+    background-color: rgb(173, 214, 181);
+}
+
+#islandpic {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font: 85% "Times New Roman", Verdana, Arial, sans-serif;
+}
+
+
+/* General Link Styles */
+
+/* =================== */
+
+a:link,
+a:visited {
+    color: #636;
+}
+
+a:hover {
+    color: #F3F;
+    text-decoration: none;
+}
+
+a:active {
+    color: #636;
+}
+
+
+/* Navigation Button Area Styles  */
+
+/* =============================  */
+
+div#nav {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 30px 10px 0 0;
+    text-align: center;
+}
+
+#nav a,
+#urhere {
+    display: block;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0;
+    text-align: center;
+    margin: 5px auto 5px auto;
+}
+
+#nav a:link,
+#nav a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: #636;
+    text-decoration: none;
+}
+
+#nav a:active {
+    color: fuchsia;
+    text-decoration: none;
+}
+
+
+#nav #urhere {
+    color: #636;
+    background-color: rgb(80%, 89%, 73%);
+    border: 1px #636 solid;
+}
+
+
+/* Travel Tip(s) Styles  */
+
+/* ==================  */
+
+.tip {
+    width: 102px;
+    border: 1px solid #334833;
+    margin-top: 40px;
+    text-align: left;
+    padding: 0 3px 8px 3px;
+    font: bold .8em Verdana, Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(50%, 55%, 50%);
+    color: rgb(80%, 89%, 73%);
+}
+
+.tip h4 {
+    color: rgb(80%, 89%, 73%);
+    background-color: #334833;
+    margin: 0 -3px 10px -3px;
+    padding: 4px 2px 5px 2px;
+    text-align: center;
+}
+
+
+/* Island Info Styles  */
+
+/* ==================  */
+
+#island-info {
+    float: right;
+    width: 115px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #404;
+}
+
+
+#island-info h3 {
+    color: black;
+    margin: 20px 2px 7px 10px;
+}
+
+#island-info #intro {
+    font: 80%/1.0 Verdana, "MS Trebuchet", Geneva, Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+}
+
+#island-info h4 {
+    margin: 15px 0 3px 0;
+    padding: 1px 2px 1px 10px;
+    color: black;
+}
+
+#island-info div {
+    line-height: 1;
+    margin-bottom: 1px;
+}
+
+#island-info a {
+    font-family: Arial, Verdana, "MS Trebuchet", Geneva, Helvetica, sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0px;
+    padding: 0 0 0 20px;
+    display: block;
+}
+
+
+#island-info a:link,
+#island-info a:visited {
+    color: #D0D8D0;
+    text-decoration: none;
+}
+
+#island-info a:hover,
+#island-info a:active {
+    color: #404;
+    text-decoration: none;
+    background-color: rgb(228, 238, 229);
+}
+
+
+
+/* Copyright Styles  */
+
+/* ================  */
+
+#copyright {
+    color: #184818;
+    border: #CAC solid 1px;
+    border-left: 10px #A878A8 solid;
+    font: .8em Verdana, Arial, sans-serif;
+    margin-top: 4em;
+    padding: 0.2em 1em;
+}

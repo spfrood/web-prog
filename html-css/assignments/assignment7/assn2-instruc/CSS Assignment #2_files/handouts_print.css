@@ -1,0 +1,109 @@
+/* Print Specific Webmaster Resources Detail Styles */
+/* Written by Scott McLeod */
+
+body
+{	font-size: 12pt;
+	background-color: white;
+	color: black;
+	font-family: "Times New Roman", serif;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{	color: black;
+	page-break-after: avoid;
+}
+
+p
+{	margin-top: 0.1em;		/* this is for IE6- that can't do "h1 + p" */
+} 
+
+h1 + p, h2 + p, h3 + p, h4 + p
+{	margin-top: 0.1em;
+}
+
+h2, h3
+{	margin-top: 0.4em;
+	margin-bottom: 0;
+}
+
+h1
+{	font-size: 20pt;
+	letter-spacing: 2pt;
+	font-family : "Felix Titling", "Copperplate Gothic Bold", Castellar, Georgia, "New York", serif;
+}
+
+h2
+{ 
+	font-size: 16pt;	
+	font-family: "Felix Titling", "Copperplate Gothic Bold", Castellar, Georgia, "New York", serif;
+	margin-top: 1.2em;
+	margin-bottom: .35em;
+}
+
+h3
+{	font-size: 14pt;	
+	font-family: "Felix Titling", "Copperplate Gothic Bold", Castellar, Georgia, "New York", serif;
+}
+
+h4, h5, h6
+{	font-size: 13pt;	
+	font-family: Georgia, "Book Antiqua", "New York", serif;
+}
+
+h6
+{	font-size: 12pt;
+}
+
+
+ul, ol, dl
+{	page-break-before: avoid;
+}
+
+
+ul 
+{	list-style-type: square;
+}
+
+ul li
+{	margin-top: 6pt;
+}
+
+ul ul
+{	list-style-type: circle;
+}
+
+ul ul li
+{	margin-top: 3pt;
+}
+
+ol
+{ list-style-type: decimal;
+}	
+	
+.printout
+{	text-decoration: underline;
+	font-weight: bold;
+}
+
+.printscreen
+{	page-break-before: always;
+}
+
+a
+{	text-decoration: none;
+}
+
+.rcc
+{	text-align: right;
+	margin: -.75em 0 .5em 0;
+	font-size: .75em;
+}
+
+div.menu 				/* if there is an internal nav bar menu on the handout page, don't print it  */
+{ 	display: none;
+}
+
+.noprint 
+{	display: none;
+}

@@ -1,0 +1,8 @@
+{
+    "name": "BattleShipV2",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "scott_r_parker",
+    "contributors": [],
+    "dependencies": {}
+}

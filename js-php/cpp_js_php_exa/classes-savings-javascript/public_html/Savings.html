@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<!--
+    Dr. Mark E. Lehr
+    September 11th, 2017
+    Include a function library with arrays utilization
+-->
+<html>
+    <head>
+        <title>Utilize the Savings Javascript Functions</title>
+        <meta charset="UTF-8">
+        <!-- Inserting Libraries -->
+        <script type="text/javascript" src="./JavascriptSavingsFunctions.js">
+        </script>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+         <script type="text/javascript">
+            //Declare variables
+            var pv=100;  //Present Value in $'s
+            var int=0.06;//Interest Rate %
+            var nYears=12;//Number of compounding periods (yrs)
+            //
+            var account=new Savings(pv, int, nYears);
+            //Perform Calculation / Call the function
+            var fv1=account.save1();
+//            console.log(fv1);
+            var fv2=account.save2();
+//            console.log(fv2);
+            var fv3=account.save3();
+//            console.log(fv3);
+            var fv4=account.save4();
+//            console.log(fv4);
+            var fv5=account.save5();
+//            console.log(fv5);
+            var fvSave = 0.0;
+            var fv6=account.save6(fvSave);
+//            console.log(fv6);
+            var fv7=account.save7();
+//            console.log(fv7);
+
+            //Display the results
+            document.write("<p>Present Value   = $"+pv+"</p>");
+            document.write("<p>Interest Rate   =  "+int*100+"%</p>");
+            document.write("<p>Number of Years = "+nYears+"</p>");
+            document.write("<p>Future Value    = $"+fv1.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv2.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv3.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv4.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv5.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv6.toFixed(2)+"</p>");
+            account.display(fv7);	
+        </script>
+        <h1>End of World</h1>
+    </body>
+</html>

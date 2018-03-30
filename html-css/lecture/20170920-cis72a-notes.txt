@@ -1,0 +1,49 @@
+Midterm Review:
+
+HTML 5 Structure
+	doctype
+	head
+	body
+
+Body Features (Semantic/structural tags)
+	header, nav
+	footer, section, article
+	
+Body Tags
+	Headings (<h1></h1>, <h2></h2> ... <h6></h6>)
+	Links (<a href=" " alt=" " title=" " ) 
+	Lists (3 types)
+		Ordered Lists 
+			<ol>
+				<li> </li>
+			</ol>
+		Unordered lists
+			<ul>
+				<li> </li>
+			</ul>
+		Descriptive lists
+			<dl>
+				<dt></dt>
+				<dd></dd>
+			</dl>
+	paragraphs <p></p>
+	images (<img src=" " alt=" " title=" ")
+	
+Formatting tags 
+	br, hr, 
+	
+Tag Attributes
+	href="(http  mailto  callto  tel)"
+	img (src)
+	most tags can have: alt=" " title=" "
+	
+HTML Tables
+	Reference file in lecture folder for this date
+	<table>
+		<tr>
+			<td>detail</td><td>detail</td><td>detail</td>
+		</tr>
+		<tr>
+			<td>detail</td>
+		</tr>
+	</table>

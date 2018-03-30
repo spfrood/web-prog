@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Inventory Management Page</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="getForm.js"></script>
+        <script type="text/javascript" src="inventory_class.js"></script>
+    </head>
+    <body>
+        <h1>Inventory Management</h1>
+        <h2>Add Item to inventory</h2>
+        <form action="addInventory.html" method="get">
+            <input name="Product" type="text" />Product</br>
+            <input name="Inventory" type="text" />Inventory</br>
+            <input name="Price" type="text" />Price</br>
+            <input name="Submit" type="submit" />
+        </form>
+        <br>
+        <h2>Remove(delete) item from inventory</h2>
+        <form action="remItem.html" method="get">
+            <input name="inumber" type="text" />Item Num</br>
+            <input name="Submit" type="submit" />
+        </form>
+        
+        <h2>Click Below to Display Inventory</h2>
+        <button onclick="inventory.display()">Display</button>
+        
+        <p id="invdisplay"></p>
+        
+    </body>
+</html>

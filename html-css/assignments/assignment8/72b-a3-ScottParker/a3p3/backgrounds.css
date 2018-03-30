@@ -1,0 +1,39 @@
+/* Backgrounds for Mountain Top Travel by Scott Parker */
+
+body { 
+	background: rgb(228,238,229) url(bg_mt_top_watermark.gif) 
+        no-repeat center bottom fixed;
+}
+
+h1 { 
+	background: #F2F6F2 url(bg_mt_top_scenery.jpg) repeat-x left bottom;
+}
+
+#breadcrumbs {
+    /* can shorten the color #440044 to #404  */
+	background: #440044 url(bg_tree_trunks.gif) no-repeat 582px 0px;
+}
+
+#wrapper {
+	background: linear-gradient(90deg, rgb(102,110,102) 1px, rgb(229,239,230) 175px);
+}
+
+#nav a:link, #nav a:visited {
+    /* The no-repeat top left settings are not required because the container for the 
+       link is the exact same size as the button image  */
+	background: rgb(50%,55%,50%) url(bg_button_up.gif) no-repeat left top;
+}
+
+#nav a:hover, #nav a:active{
+    /* The no-repeat top left settings are not required because the container for the 
+       link is the exact same size as the button image  */
+	background: rgb(80%,89%,73%) url(bg_button_dn.gif) no-repeat left top;
+}
+
+#island-info {
+   background: rgb(66%,47%,66%) url(bg_purple_gradient.jpg) repeat-x left top;
+}
+
+#island-info h4 {
+	background: url(bg_purple_gradient.jpg) repeat-x 0px -25px;
+}

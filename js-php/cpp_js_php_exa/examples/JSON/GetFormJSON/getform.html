@@ -1,0 +1,52 @@
+<!-- 
+    Dr. Mark E. Lehr
+    Example for CSC/CIS 17B
+        JSON stringify
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Create the _Get Object</title>
+        <!-- Linking the script from getFrom.js page to call the functions created there -->
+        <script type="text/javascript" src="getForm.js"></script>
+    </head>
+
+    <body>
+        
+    <!-- inline javascript run between the <script> tag   -->
+    <script type="text/javascript">
+        // Create object that is filled with the text in the url bar of the browser    -->
+        var url=document.location.href;
+        // Call $_GET? Unsure how this works. Is $_GET being created here or is it 
+        //   something that is built into HTML? or is it built into javascript?  
+        //   Is this referencing the $_GET in the getForm.js file by calling the getForm function? -->
+        $_GET=getForm(url); 
+        // running a for loop... need more clarification on how the syntax works for this
+        //   because 'property in $_GET' has text=text assigned to it... $_GET[word] is the id
+        //   or name of the field instead of accessing it like an array with $_GET[integer] -->
+        for(property in $_GET){
+        // Creates html output for the $_GET property... essentially outputs text to the html
+        //  document for display by the browser. -->
+          document.write(property+"="+decodeURIComponent($_GET[property])+"</br>");
+        }
+        // creates an object filled with text by running a built-in JSON function (JSON.stringify($_GET)
+        //   Need to know if this only works with $_GET or can you pass any object to it? -->
+        var text=JSON.stringify($_GET);
+        // output the text object created by JSON.stringify   -->
+        document.write("The Object Stringified = "+text+"</br>");
+        // create new object called obj buy running the text object into JSON.parse(text)
+        //   !!! THe 'text' object is passed into the JSON.parse() function   -->
+        var obj=JSON.parse(text);
+        // for loop to output the new object which should be identical (the character
+        //   conversion done by HTML for special/reserved characters will be different than
+        //   the original data entered... ie if ?, /, =, etc was entered  in the form boxes
+        //   then the new text value will be the UTF-8 code rather than the original text) -->
+        for(property in obj){
+            document.write(property+"="+obj[property]+"</br>");
+        }
+    </script>
+    </body>
+</html>

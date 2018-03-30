@@ -1,0 +1,18 @@
+Assignment:
+Go through codeacademy.com HTML and CSS online classes.
+
+To run PHP/Javascript files from netbeans:
+1) copy project to xampp htdocs folder
+2) Need to change netbeans project->properties->'Run Configuration'run 
+	directory to the htdocs folder
+3) Need to change the runfile to the appropriate file for .php or 
+	(for javascript) .html files.
+
+Game will have to include:
+Regular Expressions (with forms)
+Database
+Graphics (gui components)
+Multi Threaded (multiple player)
+html5 (video/music) 
+Model View Controller (MVC)
+

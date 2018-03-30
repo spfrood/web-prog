@@ -1,0 +1,106 @@
+@charset "utf-8";
+@font-face {
+    font-family: REBUFFED;
+    src: url(gemfonts_rebuffed/REBUFFED.ttf);
+}
+@font-face {
+    font-family: KellyAnnGothic;
+    src: url(KellyAnnGothic.ttf);
+}
+@font-face {
+    font-family: buScarecrow;
+    src: url(bosil-unique-fonts_bu-scarecrow/buScarecrow.ttf);
+}
+@font-face {
+    font-family: BreatheFire;
+    src: url(chequered-ink_breathe-fire/BreatheFire.otf);
+}
+
+/* A3P5 Stylesheet Sample */
+
+header, nav, section, footer, article {     /* leave this alone */
+	display: block;
+}
+body {                       /* change background, color, and font  */
+	background:#333333;
+	color: #330066;
+	font-family: BreatheFire, Times, Arial, Helvetica, sans-serif;
+	font-size: 120%;
+	margin: 0;
+	padding: 0;
+}
+#pagewrap {	                 /* change background, adjust width as needed */
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #444444;
+}
+header {                     /* change background, color, whatever else you want */
+	background: #666666;
+	color: #010101;
+	margin: 0;
+	padding: 2em 2em;
+}
+#main {                      /* change background, whatever else you want   */
+	width: 700px;
+	float: left;
+	background: #676767 url(creepy_bg_faded.gif) no-repeat center bottom fixed;
+    color: #BBBBBB;
+	padding: 0em;
+}
+#main > * {                   /* adjust as needed  */
+	margin-left: 2em;
+}
+#main ul li {
+    list-style-image: url(skull-bullet.gif);
+}
+h1 {                          /* adjust as needed  */
+	margin: 0;
+}
+h1, h2, h3, h4 {              /* change fonts to fit your theme  */
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 0;
+}
+p {                           /* adjust as needed  */
+	margin-top: 5px;
+}
+nav {                         /* change background, adjust width, padding as needed  */
+	width: 200px;
+	float: left;
+	background: #666666 url(creepy_tree.jpg) no-repeat left bottom;
+	padding-top: 4em;
+}
+nav ul {
+	list-style-type: none;     /* this turns off bullets on navigation list   */
+	line-height: 1.4;          /* adjust as needed for link spacing */
+	padding-left:0;
+}
+nav li {                      /* change background, adjust others as needed  */
+	margin-top: .5em;
+	font-size: 95%;
+	background: rgba(25%,25%,30%,0.25);
+	text-align: center;
+}
+nav a {                       
+	text-decoration: none;     /* turns off underlining on links within nav bar  */
+}
+article {                     /* adjust as needed to separate one article from next */
+	margin: 1em;
+}
+#hotelfig {                   /* add borders and margin to your hotel image here  */
+	float: right;
+    border: 5px outset #CCDDDD;
+    box-shadow: -7px -4px 5px 2px #333344;
+}
+#hotelfig figcaption {
+    text-align: center;
+    font-weight: 600;
+    font-size: 85%;
+}
+
+footer {                      /* adjust as needed  */
+	margin-top: 2em;
+	text-align: center;
+	font-size: 90%;
+	clear: left;
+}

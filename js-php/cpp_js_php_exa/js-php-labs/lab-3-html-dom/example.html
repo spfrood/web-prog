@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+    }
+
+</style>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = "Hello World!0";
+
+    </script>
+
+    <p id="intro">Hello World!1</p>
+
+    <p>This example demonstrates the <b>getElementById</b> method!</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        var myElement = document.getElementById("intro");
+        document.getElementById("demo1").innerHTML =
+            "The text from the intro paragraph is " + myElement.innerHTML;
+
+    </script>
+
+    <p>Hello World!</p>
+
+    <p>The DOM is very useful.</p>
+    <p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        var x = document.getElementsByTagName("p");
+        document.getElementById("demo2").innerHTML =
+            'The first paragraph (index 0) is: ' + x[0].innerHTML;
+
+    </script>
+
+    <div id="main">
+        <p>The DOM is very useful.</p>
+        <p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+    </div>
+
+    <p id="demo3"></p>
+
+    <script>
+        var x = document.getElementById("main");
+        var y = x.getElementsByTagName("p");
+        document.getElementById("demo3").innerHTML =
+            'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+    </script>
+
+    <p class="intro1">The DOM is very useful.</p>
+    <p class="intro1">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+    <p id="demo4"></p>
+
+    <script>
+        var x = document.getElementsByClassName("intro1");
+        document.getElementById("demo4").innerHTML =
+            'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+
+    </script>
+
+    <p class="intro2">The DOM is very useful.</p>
+    <p class="intro2">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+    <p id="demo5"></p>
+
+    <script>
+        var x = document.querySelectorAll("p.intro2");
+        document.getElementById("demo5").innerHTML =
+            'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+
+    </script>
+
+    <script>
+        document.write(Date());
+
+    </script>
+
+    <h2>JavaScript can Change HTML</h2>
+
+    <p id="p1">Hello World!</p>
+
+    <script>
+        document.getElementById("p1").innerHTML = "New text!";
+
+    </script>
+
+    <p>The paragraph above was changed by a script.</p>
+
+    <h1 id="id01">Old Heading</h1>
+
+    <script>
+        var element = document.getElementById("id01");
+        element.innerHTML = "New Heading";
+
+    </script>
+
+    <p>JavaScript changed "Old Heading" to "New Heading".</p>
+
+    <p id="p11">Hello World!</p>
+    <p id="p12">Hello World!</p>
+
+    <script>
+        document.getElementById("p12").style.color = "blue";
+        document.getElementById("p12").style.fontFamily = "Arial";
+        document.getElementById("p12").style.fontSize = "larger";
+
+    </script>
+
+    <p>The paragraph above was changed by a script.</p>
+
+    <h1 id="id011">My Heading 1</h1>
+
+    <button type="button" onclick="document.getElementById('id011').style.color = 'red'">
+Click Me!</button>
+
+    <p>
+        <button onclick="myMove()">Click Me</button>
+    </p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        function myMove() {
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            var id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+
+    </script>
+    <br />
+    <br />
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+    obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+}
+</script>
+<br />
+<br />
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Thank You";
+}
+</script>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn11">Try it</button>
+
+<p id="demo221"></p>
+
+<script>
+var x = document.getElementById("myBtn11");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+    document.getElementById("demo221").innerHTML += "Moused over!<br>";
+}
+
+function mySecondFunction() {
+    document.getElementById("demo221").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+    document.getElementById("demo221").innerHTML += "Moused out!<br>";
+}
+</script>
+
+<br />
+<br />
+<br />
+
+<div>
+<p>The DOM is very useful!</p>
+<p>This example demonstrates the <b>document.body</b> property.</p>
+</div>
+
+<script>
+alert(document.body.innerHTML);
+</script>
+
+
+<h1 id="id09191">My First Page</h1>
+<p id="id09192"></p>
+<p id="id091912"></p>
+
+<script>
+document.getElementById("id09192").innerHTML = document.getElementById("id09191").nodeName;
+</script>
+
+<script>
+document.getElementById("id091912").innerHTML = document.getElementById("id09191").nodeType;
+</script>
+
+
+</body>
+
+</html>

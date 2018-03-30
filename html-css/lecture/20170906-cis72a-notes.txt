@@ -1,0 +1,39 @@
+CIS-72A Notes Sept. 6, 2017
+
+Links to accelerate:
+https://www.w3schools.com/
+https://www.codecademy.com/learn/all
+
+
+3 types of lists in HTML
+    1) unordered list
+        Items denoted by bullet points 
+        Default icon is little circle but can change or sub in custom image
+        Tag is 
+        <ul> 
+            <li>list item</li>
+        </ul>
+    2) ordered list
+        Numbered is default but can change the ordering labels in code
+        Tag is
+        <ol>
+            <li>list item</li>
+        </ol>
+    3) description list (definition list)
+        Items in list can be indented or not. Come in pairs, dt first dd afterwards
+        Tag is
+        <dl>
+            <dt>un-indented list item</dt>
+            <dd>indented list item</dd>
+        </dl>
+        
+    Assignment 2
+    Focuses on links
+    Tag format is: <a attribute="attribute details">link text</a>
+    Example:
+    <a href="myfile.html">This is the link text</a>!
+        NOTE: Better to use local file designations in order to keep the website portable in the 
+        event that the DNS entry changes. That way the URL will not have to be edited for every
+        link in the page.
+    
+    

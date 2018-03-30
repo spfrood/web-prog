@@ -1,0 +1,46 @@
+CIS-72A Notes Sept. 13, 2017
+
+Links to accelerate:
+https://www.w3schools.com/
+https://www.codecademy.com/learn/all
+
+HTML Tags (reference boards.html)
+
+Intro to CSS for formatting
+
+Replaces majority of old-school formatting tags
+
+example: Don't use <br> for vertical spacing. Use CSS to control exact amount of pixels/percent, etc.
+
+section tags - <section id="main">   THe "id" allows this section to be called out later when using CSS
+
+Sometimes CSS can be intersperced directly into the HTML. Example: in <body> can use the tag format <body style="csspropertyname:propertyvalue; csspropertyname:propertyvalue;"> so background color would be: <body style="background-color:silver;">
+
+Can also put <style></style> inside <head> of document in the format to apply specific styles to certain HTML tag contents as follows:
+    <style>
+        selector(the html tag to be formatted) {
+            cssproperty:propertyvalue; 
+            cssproperty:propertyvalue
+            }
+    </style>
+    
+    Example of implementation:
+    <head>
+        <meta charset="utf-8">
+        <title>ABCDEFG</title>
+        <style>
+            body {
+                background-color:silver;
+                font-family:sans-serif;
+                }
+            h1, h2, h3 {
+                font-family:Georgia, Times, serif;
+            }
+        </style>
+    </head>
+	
+	Best method is to put CSS style into their own file that will be referenced by the HTML document
+	
+Right-click in tag to bring up "quick edit" options to edit the CSS style file remotely
+    
+    

@@ -1,0 +1,24 @@
+CIS-72A Final Exam
+
+Focus on Tables and Forms
+
+Little more with CSS
+
+Tags and Attributes to know:
+
+<form> </form> -> attributes: action(usually web page), method (get or post), type (radio, etc), 
+	input (text, etc), 
+<table> </table>
+table spacing/borders
+font-family (serif is default) so if not serif it's been changed
+table headers/align/bold?
+background color on body and table
+
+Review practice final from class blackboard site.
+
+To make an item in a form required use attribute required="required"   
+	** Easiest to do in a textbox.  Maybe with text area as well
+	
+Do a color change a:hover{ ____ } 
+	this is for links in CSS to do something when mouse is over them
+	

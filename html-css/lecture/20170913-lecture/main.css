@@ -1,0 +1,23 @@
+body {
+    background-color: silver;
+    font-family: sans-serif;
+    color: rgb(15%, 50%, 85%);
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, Times, serif;
+}
+
+h1 {
+    color: #994818;
+}
+
+h2 {
+    color: chartreuse;
+}
+
+nav {
+    background-color: rgb(200, 255, 255);
+}

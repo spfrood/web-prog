@@ -1,0 +1,19 @@
+Recommended extensions to add to Brackets for HTML/CSS coding
+
+HTML Skeleton
+Beautify
+HTML Wrapper
+CSS Lint (search csslint)
+Emmet
+
+
+
+W3C HTML Validator: Use this tool to check your HTML 
+https://validator.w3.org/#validate_by_input
+
+Closing Tag Checker: After the above tool says it is "valid", check 
+further for other issues
+https://www.aliciaramirez.com/closing-tags-checker/
+
+W3C CSS Validator: Use this tool to check your CSS
+https://jigsaw.w3.org/css-validator/#validate_by_input

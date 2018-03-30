@@ -1,0 +1,35 @@
+Lecture Notes:
+
+October 4, 2017
+
+for (property in $_GET)
+for loop to print out all the name/value pairs in an object
+
+Does $_GET have numeric array value as well as the $_GET[id/name]?
+
+
+
+
+3 Projects to do
+Game - group project
+	Who's doing what (roles), what are our plans? Simple web page/
+	intro page, basic model of game
+	
+Survey Engine - individual
+	5-10 questions, save to local storage
+Shopping Cart - individual
+	Do entire storefront
+
+Survey project example
+Q1. What Operating system do you use?
+1) Windows    2)  Linux   3)  Mac   4)  Other
+
+Q2. What degree/field are you pursuing?
+1) Computer Sci    2) Computer Engineering
+3) Comp Info Sys   3) Other
+
+Q3. Favorite programming language?
+1) C++     2) Java    3) Python   4) JavaScript
+5) PHP     6) Other
+
+

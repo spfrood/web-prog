@@ -1,0 +1,9 @@
+To run php with xampp must copy the file.php that contains the php code to the xampp/htdocs/
+
+Put the HTML files in:
+
+
+
+
+
+
