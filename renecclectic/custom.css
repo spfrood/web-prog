@@ -1,0 +1,92 @@
+/* Custom Page Styles for Renaissance Eclectic site pages */
+/* This stylesheet targets items that occur only on specific pages */
+
+table#calendar { 
+	width: 98%;             /* change this table width as needed  */
+	margin-left: auto;      /* auto left and right margins centers the table since it has a width */
+	margin-right: auto;   
+	border-collapse: collapse; /* leave this alone unless you want the effect of cellspacing then change to "separate" */
+	border-spacing: 0px;       /* leave this alone unless you want the effect of cellspacing then change to what you want */
+}
+
+table#calendar td, table#calendar th { 
+	width: 14%;        /*  there are 7 days a week, so 7 * 14% = 98%, so leave this alone or tweak only slightly        */
+	padding-left: 1px;        /*  adjust as needed to get more spacing inside events table cells (the effect of "cellpadding") */
+}
+
+table#calendar td { 
+	height:  7.9em;     /*  change this height for the calendar days as needed */
+	vertical-align: top; /* keeps text vertically aligned to the top of the cell (default is center)     */
+}
+
+
+table#calendar {
+    table-layout: auto;
+    font-family: Arial, sans-serif;
+    font-size: 70%;
+}
+
+table#calendar #monthYear {
+    height: 30px;
+    background-image: url(images/Athame02-1.jpg);
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+table#calendar .weekday {
+    height: 20px;
+    font-size: 1.25em;
+}
+
+table#calendar .date {
+    color: white;
+    background-color: black;
+}
+
+table#calendar .noday {
+    background: url(images/creepy_tree.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+table#calendar .event {
+    color: #FF2222;
+}
+
+
+.question {
+    color: #000000;
+    background-color: #DEDEDE;
+}
+
+.answer {
+    margin-left: 20px;
+    color: #000000;
+    background-color: #EDEDED;
+}
+
+ 
+#roomservicefig {
+    float: right;
+    margin-left: 20px;
+}
+#spafig {
+    float: left;
+    margin-right: 20px;
+}
+
+.servicepic {
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #222222;
+    box-shadow: 15px -10px 0.5em #9E9E9E;
+}
+
+.servicefig figcaption {
+    font-family: BreatheFire;
+    box-shadow: 15px -15px 0.5em #9E9E9E;
+    margin-top: -5px;
+    text-align: center;
+}
+
+
