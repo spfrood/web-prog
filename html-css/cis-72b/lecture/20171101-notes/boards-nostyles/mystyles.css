@@ -1,0 +1,17 @@
+/* Boards styles by Scott */
+
+body {
+    background-color: #EEEEEE; /* can also use #EEE which is shortcut for #EEEEEE */
+    color: dodgerblue;
+    margin: 0 15%;
+}
+
+nav a:link, nav a:visited {
+    color: brown;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+    color: aqua;
+    text-decoration: none;
+}

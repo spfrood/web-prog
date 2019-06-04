@@ -1,0 +1,428 @@
+<html>
+<head>
+<title>Assignment #4 / Final Project</title>
+
+<link href="../../handouts_print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="../../handouts_screen.css" rel="stylesheet" type="text/css" media="screen" />
+
+<style type="text/css">
+<!--
+ol.steps li
+{	margin-top: .75em;
+}
+
+ol.alpha, ol.alpha li 
+{	list-style:lower-alpha
+}
+
+-->
+</style>
+
+<style type="text/css">
+<!--
+/*
+body {
+	background-image: url(../../bg-assign-not-ready.gif);
+}
+*/
+-->
+</style>
+
+
+</head>
+
+<body>
+<h1>Assignment #4 / Final Project </h1>
+<p class="rcc">RCC Fall 2017 CIS-72B CSS</p>
+<h3>Final Project (Styling a Site With a Theme) <br />
+  <span class="testdate">Due  in Blackboard by  Wednesday December 13 at 11:59pm </span><br>
+  300 Points (+50 Extra Credit)</h3>
+<h4> Lateness:  </h4>
+<ul>
+  <li>
+    <h4>100% of value if submitted on or before Wednesday Dec 13 @11:59pm    </h4>
+  </li>
+    <li>
+    <h4>85% of value if  submitted late by Thursday Dec 14 @ 11:59pm</h4>
+  </li>
+  <li>
+    <h4>0% if submitted after Thursday Dec 14  (will not be graded if more than 24 hours late)</h4>
+  </li>
+</ul>
+<h2> General Comments:</h2>
+<p> Feel free to use  
+whatever  favorite CSS editor you like when building styles for this site. If it seems like a lot to do, keep in mind that 50 extra credit points are built into the scoring, so you don't have to do everything to still end up with a perfect score! Be sure to save your work often for this 
+  assignment and be sure to make proper backups of your site's files. Loss of files will not be considered 
+  a valid excuse -- only an indication that you are not yet the webmaster you 
+can and should be. </p>
+<p> You are free to obtain graphics from any source you like for this project 
+  as long as they have not already been used in this class previously in any way (other than in assignment 3 part 5.) The graphics you may have used in assignment 3 part 5 can be reused for this project if you like. Indicate at the bottom of each page (in the copyright / footer area) where 
+you got each image appearing on that page. If the image is a background image appearing on all pages, you can indicate where you got that image in a comment in the style sheet next to that property value.</p>
+<p>When graded, your site will be tested using the latest Chrome browser for Windows at a resolution of 1280x1024 -- this is the same resolution you will normally find in the MLK-219  lab computers (right click the Windows desktop and choose &quot;display settings&quot;, then &quot;advanced display settings&quot; (Windows 10) to check/set your screen resolution as needed.) It is recommended you test your site frequently using this same set up. Your style sheet files will be tested for validation using the W3C validator and you will lose points for each validation error found. So it is recommended that you validate your styles as you develop them, not just as a final step just before  uploading your final version of your site. </p>
+<p>All of your CSS must be your own! 
+  That said, you are encouraged to modify and adapt existing sections of CSS previously used or demonstrated in this class  (textbook, videos, class demos) to apply it to your theme and your custom needs (copy the technique, not the exact code.) You 
+  should not include any scripts of any kind, such as JavaScript, in your site -- 
+just HTML and CSS. </p>
+<p><strong>You may</strong> add &quot;div&quot; and &quot;span&quot; tags and/or id's and classes, but <span style="font-weight: bold">only if they are absolutely necessary</span> for you to style your site the way you want to -- you will lose points if your instructor determines that there were  selectors that could have been used instead to produce the same effect without changing the HTML. Note that there are a lot of div's and span's and id's and classes already there for you to use so  study this existing HTML and see if you can make clever use of selectors (and/or properties) to target the areas that  you would like to style instead of changing the existing HTML. The general goal is to do as much as you can with your own CSS and leave the existing HTML as is. You may change the text on the pages  only where indicated in the instructions below, such as within the copyright / footer area, the testimonials area, the events calendar table, and the frequently asked questions area. </p>
+<p><strong>You may not</strong> rename any existing class name or id name. You may not move,  reorganize, or significantly change any of the existing HTML tag structure without obtaining permission to do so from your instructor. You may not rename any .html files or .css files. You may not use points (pt) or inches (in) for any font sizes, margins, padding, etc. You may not use any graphics that have already been used for any purpose in this class unless it was part of assignment 3 part 5. You may not directly copy exact CSS that has been already used for any purpose in this class unless you modify it significantly to suit your theme (again, unless it was part of assignment 3 part 5.) You may not change the text within the site on any page unless these instructions specificly tell you it is OK to do so.<br>
+  <br>
+</p>
+<h3>Preparing for Success:</h3>
+<p>You may find these references helpful in demonstrating some similar techniques to what you are asked to do in this final project.</p>
+<ul>
+  <li> <strong>Styling Data Tables</strong>: Browse chapter 8 in your textbook and watch hybrid video #6  (see video links below). </li>
+  <li><strong>Styling Lists</strong>:  Hybrid video #6 will  help with lists also (see video links below). There is also a brief section in the book, exercise 7 in chapter 4, that might help.  </li>
+  <li><strong>Positioning</strong>: There is one demo for an introduction to positioning properties, available from the link here: <a href="http://www.faculty.rcc.edu/mcleod/css/class_demos/positioning.html">http://www.faculty.rcc.edu/mcleod/css/class_demos/positioning.html</a><br>
+    <br>
+  You'll also see examples of positioning on the final project layout guide, available from the link here: <a href="http://www.faculty.rcc.edu/mcleod/css/handouts/finalproject_layoutguide.html">http://www.faculty.rcc.edu/mcleod/css/handouts/finalproject_layoutguide.html</a></li>
+   <li><strong>Here are the details on  Hybrid Video #6: Lists (and tables too)</strong>: For this video there is no need to do what the video does (unless you want to).  There is nothing to print out or turn in, so just sit back, relax, watch and enjoy it and maybe make a few notes. The first 40 minutes of the 62 minutes are the most directly helpful for the final project. The usual links are below, with the data files being optional: <br>
+     <br>
+     Lists and Tables video: <a href="../videos/flash/v6/css_video_6_lists.html">Hybrid Video #6 (Flash)</a><br>
+	 <br>Link to the data files (.zip file): <a href="../videos/css_video_6_lists.zip">Data files for Video #6</a>   </li>
+</ul>
+<h3>Steps to Success:</h3>
+<ol class="steps">
+  <li><b>Get the Zip file.</b> It 
+    contains all of the web site's files (6 .html files, 2 .css files, and  3 .jpg graphic files). Download it from Blackboard's Assgnment's page. It is called &quot;css-hotel.zip&quot;.</li>
+  <li><b>Extract the web site files from the &quot;css-hotel.zip&quot; zip file </b>using your favorite zip extraction tool (such as WinZip.) It will create its own &quot;css-final-project&quot; folder. Within it  should 
+    be 6 HTML documents (.html),  2 style sheets (.css), 
+    and  3 graphics (.jpg) files.  </li>
+  <li><b>Check out the site!</b> Open the home page &quot;index.html&quot; in a browser  and take a tour of the  site, using the links to visit all 6 pages. </li>
+  <li><strong>Do Assignment 3 Part 5!</strong> This assignment part was designed to get you started on this assignment. If you did that assignment part already, you can use a lot of your images and CSS formatting code from there. You will just have to carefully copy/paste those style rules into the proper CSS sections of this final project's style sheets to get credit for them. Then continue by  building the new CSS styles  required by this project. Note that the steps below do not assume that you have done assignment 3 part 5, so if you find things here you have already done previously in A3P5, you can feel free to reuse that work to satisfy these requirements. </li>
+  <li><b>Its your hotel, give it a name and a theme!</b> You should already have a name and a theme for your hotel that was ok'd by your instructor from your work in assignment 2. If so you can skip this step. If not, continue with the rest of this step  below. <br>
+    <br>
+    You are required to rename 
+    the hotel, and in doing so, decide on a visually rich theme for the site. This theme should 
+    give you a clear direction for your styles. For example, if you call the hotel 
+    the &quot;Star Wars Hotel&quot;, then you would be choosing colors, backgrounds, 
+    bullet graphics, fonts, and other styles that fit that theme.  Be creative and have fun with a name and a theme of styles that 
+    would go with it. No two people can pick the same name/theme so let me know in 
+    person or by email (see the syllabus for my address) what theme you are planning 
+    to do and I'll ok it for you (I'll make sure it is appropriate,  hasn't already 
+    been chosen by someone else, and possibly make some helpful suggestions). It is best to pick a very specific name that has 
+    a good set of recognizable styles and graphics. So &quot;Star Wars Hotel&quot; 
+    is better than &quot;Space Hotel&quot; because it  
+    will guide you to more specific images, backgrounds, colors, fonts, etc. You can 
+    get graphics from any web site to use on your pages, just remember to indicate 
+    where they came from in the copyright / footer section at the bottom of each page. <br>
+    <br>
+    <br>
+    Note that you will lose 10 points if you have not ok'd your hotel name/theme in email with your instructor  
+    by 13 days  prior to the project due date. You will lose 20 points if you not ok'd it by 7 days before the project due date.  And if you never do get your name/theme ok'd and someone else is also doing 
+  that theme or your theme is deemed otherwise inappropriate, you can  lose up to 100 points based on the instructor's discretion (and your lack of discretion.) This is deducted from whatever points your project would otherwise earn. </li>
+  <li><b>Find some graphics to fit your chosen theme.</b> You will need to find 4 background 
+    images, 2 bullet images,  one photo to represent your hotel, one  &quot;room service&quot; photo, one &quot;spa&quot; photo, and one logo image for your hotel (you may have to  create this one). From your work on assignment 3 part 5, you may have already found many or all of the graphics needed for your site. Double check the list of requirements for these images below to see. If so, you can skip this step. If not, continue on with the rest of this graphics step.<br>
+    <br>
+    When looking for graphics for your site, you can use any graphics from another 
+  site (such as another site that has a similar theme as yours), or from a graphics 
+  web site that allows you to search by keywords or categories. You may not use any graphics that have already been used for any purpose in this class unless it was from assignments 2 or 3 on a part that was related to your theme -- those images are ok. If you are skilled 
+  in graphics, you are encouraged to create something or at least modify some aspect 
+  of the existing graphics you find. Please note that normally if you are creating a 
+  Web site for commercial use, you cannot just steal graphics from any source you 
+  want to. But for the purposes of this assignment, it is ok.  So just use Google image search and take what you like.<br>
+    <br>
+    <ol class="alpha">
+      <li><strong>One hotel image</strong>: this  image will be displayed 
+        on your home page. It is important to find something that matches your theme 
+        well. It will replace the original image given to you on the home page. Using 
+        the image search capabilities in a search engine is likely to give you some 
+        possibilities. Make sure the image is of a reasonable size. Feel free 
+        to modify the image you obtain if you like, for example to adjust size, change colors, add hotel name, or anything else that might make it look more like your  hotel.</li>
+      <li><strong>Four background images</strong>: these images will be used as backgrounds 
+        in different areas of the site. They must act as backgrounds, not foregrounds 
+        -- they must not interfere with the user's ability to read the text and experience 
+        the content. To get full credit you must use at least 4 different background images in 4 different places within your site, and you must choose from amongst these options:  1 can be for 
+        the page background itself, 1 can be for general use on the nav bar or 2 of 
+        them can be for link buttons on the nav bar (one for all nav bar hovered links, 
+        one for all non-hovered), 1 can be for usage on just the calendar (Events 
+        page only), 1 can be used as an image-based text replacement for one of headings, and 1 can be for any other element that appears on all pages (such 
+        as the copyright / footer area, the testimonial area, or any div or span that currently exists or that you set up somewhere else on 
+        every page). Do not try to use a different background image on each page. It will not count unless you follow the options above.</li>
+      <li><strong>Two bullet images</strong>: these images are generally harder to 
+        find but are easier to make. They should be very small (no larger than  20px by 20px). 
+        One should either be slightly larger or more prominently colored than the 
+        other (against its background). That way, one can be used as the outer bullet 
+        and the smaller less prominent one can be used as the inner (nested) bullet 
+        for nested unordered lists (on the Reservations page). Also, they can be 
+        partially transparent so that they can appear to be non-rectangular, such 
+        as round or diamond shaped. If you can find a bullet that matches your theme 
+        so much the better, but it is hard to get much detail out of 20x20 pixels, 
+        so feel free to settle for something that at least goes well with your colors 
+        and backgrounds. Any bullet images larger than 20x20 can lose points.  Microsoft word is a good last resort for finding bullets. </li>
+      <li><strong>Hotel logo image</strong>: this  should be an image  that contains your  hotel name. You can create it with a graphics program such as Photoshop or Fireworks, or you can create it with an online tool such as one of the sites described in the course handout entitled <a href="http://www.faculty.rcc.edu/mcleod/html/handouts/creating_logos.html">Creating Logos and Buttons</a> (Creating Logos Free and Easy). This can be created pretty easily in a matter of minutes. Choose a font that has some real style and flair, as appropriate for your hotel theme. This logo image will  be used for absolute 
+        positioning purposes (see item #9 &quot;Positioning Styles&quot; below), to apply as a background (that doesn't repeat and is clearly visible) or to use in an img tag. Ideally this image would contain your hotel's name and also represent your hotel's theme somehow. If you have graphics skills it could contain your hotel name and  some accompanying logo design, mascot, or something that help represent your hotel theme and be suitable to appear on  all pages. </li>
+      <li><strong>Room service image</strong>: this is an image that will replace the existing &quot;room service&quot; image on the &quot;Services&quot; page. This image should somehow be related to your theme and have some kind of food oriented service depicted, although it does not need to be actual room service.</li>
+      <li><strong>Spa image</strong>: this is an image that will replace the existing &quot;spa&quot; image on the &quot;Services&quot; page. This image should somehow be related to your theme and have some kind of spa related service depicted, although it does not need to be an actual spa.</li>
+    </ol>
+  </li>
+  <li><strong>Make some HTML changes</strong>. Here are some changes that you will get points for making.<br>
+    <br>
+    <strong>On all pages</strong>, your name should be in the 
+    HTML title. In general you should find/replace &quot;Joe Student&quot; with your own name on all 8 files (6 html pages and 2 style sheet files). You should also replace the words &quot;Whatever Hotel&quot; with 
+    your own hotel's name wherever it appears on all 8 files. Fill out the copyright / footer section of each page with appropriate notations of where you got your images. Also make up a hotel address that better fits your theme and replace the existing hotel address with your own hotel's address.  <br>
+    <br>
+    <strong>On the home page and services pages</strong>, replace the existing hotel picture on the home page with a hotel  
+    image that better fits your theme.  
+    Then replace  the existing &quot;room service&quot; and &quot;spa&quot; images on the &quot;Services&quot; page. If your chosen replacement image is a .jpg file, just delete the given  file and rename yours to that same filename. That way no HTML needs to be changed. However,  if your chosen replacement image is a .gif or .png file, then you should change the &quot;src&quot; property of the &quot;img&quot; tag to match the new replacement file's name.  <br>
+    <br>
+    For both pages, 
+    fill out the 3rd line of the 
+    copyright / footer area on this page with an appropriate indication of the source of these 
+    images (a link to the actual Web page containing it, a note that you created it, 
+    or whatever). <br>
+    <br>
+    <strong>On the FAQ page</strong>, add a new question and  answer at the top of the existing ones as follows. Ask the question &quot;What 
+    is the story behind the hotel's theme?&quot; (worded as you like.) Then add your own answer by making 
+    up some funny and/or interesting and/or dramatic story about the how the hotel 
+    became what it is today. Be careful to use the same HTML tags and classes 
+    as the existing questions and answers have so you will be able to style  all questions 
+    one way and  all answers another by using these existing classes later.  <br>
+    <br>
+    <strong>On the events page</strong>, add at least 5 events  for your hotel into the HTML for the 
+    calendar table on Friday's or Saturday's. There is a &quot;div&quot; within each appropriate table cell 
+    with a class of &quot;event&quot;. Inside those event div tags is where you should 
+    add your event text. Just make up some events supposedly taking place at your 
+    hotel on a Friday or a Saturday, similar to the approach taken with the existing events.  These events must be appropriate 
+    for your hotel's theme. For example, if your hotel's theme is &quot;Rainforest&quot;, 
+    appropriate events could be  &quot;Plant 
+    a tree&quot;, &quot;Video tour of a Rainforest&quot;, etc. Be creative and use your sense of humor. You may place other events (or repeats) on other days 
+    too, but only the ones on Fridays and Saturdays will be graded and given credit. Make sure 
+    that these events are placed within the existing &quot;event&quot; div tag (and  delete the existing non-breaking space within that div tag.) <br>
+  <br>
+  <strong>For the testimonials</strong>, rewrite the first testimonial (customer quotation) on each page except for on the home page (which should keep the existing 3). Just make up a funny quote and speaker name and replace the first  one that is already there with your new one. Try to make it appropriate for the particular page it is on (for example the testimonial you add to the services page could be about the room service food or the spa). Be careful to place it within the existing span tags so it can be styled appropriately later. </li>
+  <li><strong>Find at least 1 specific Web font</strong> online that fits your theme very well that you can  use to embed into your site to enhance the appearance of the headings in your site.  Our textbook has example uses of @font-face and the font-family properties as well as example usage of Google fonts. You can also use the Google Fonts feature as was done in previous assignments. </li>
+  <li><b>Build your common styles!</b> Once you have some graphics picked out (especially 
+    your backgrounds) and have made the above HTML additions, you are ready to begin writing 
+    your "common" CSS styles -- the general styles that will be applied to all pages. 
+    You should create these styles in the given &quot;common.css&quot; file that all 
+    pages are already linked to. First insert your own full name into the 2nd line 
+    of the &quot;common.css&quot; file within the existing CSS comment where it says 
+    &quot;YOUR NAME HERE&quot;. Then, within the given &quot;common.css&quot; file, 
+    notice that this style sheet has been organized very carefully and commented heavily to help you to see what CSS rules and formatting you need to add and where within the style sheet to place it.  The organization of that file matches exactly the organization of the notes below. You can pretty much just read the style sheet comments and see what to do but the notes below may help clarify what is needed in some cases so use the notes below as a reference. Note that to receive full credit for your CSS work, 
+    you must place your CSS styles in the appropriate commented sections of the given 
+    style sheet. <br>
+    <br>
+  You can use some of the styles that you created for assignment 3 part 5 in this final project, particularly in the area of backgrounds. But you will need to modify the selectors you used to be appropriate for the html of this site (id and class names are different for example.) And you will need to place these style rules into the appropriate sections of the given style sheets to get full credit for them.<br>
+    <br>
+    Keep your hotel theme in mind  and try 
+    to incorporate the theme into as many of your style choices as you can. Check out the many sample themes on display in the printscreen  gallery handout and feel free to use some of those same general ideas when deciding how to style your site to make your theme come alive. 
+    See the final project grading sheet to see a summary of these requirements and their associated point values.
+    <ol>
+      <li><strong>Page Styles</strong>: Create default styles for the page. Using the &quot;body&quot; selector, make meaningful use of  page background properties, 
+        page margins (top, left, and right), padding, text color,   font family, and font size (using em or percentage units). Other properties 
+        can be optionally set here  as needed. The key here is not to allow the browsers to use their  own defaults 
+        for the &quot;body&quot; for any of these listed properties! You may also set some properties on the pagewrapper div here as needed but note that you will lose points for each of the properties mentioned above that are not specifically set by you on the &quot;body&quot;. </li>
+      <li><strong>Header (Banner) Area Styles</strong>: styles for the top header (or banner) area (which happens to also include the h1 heading) &amp; should be treated as a banner area. Suggestions include giving a height to this area (to increase its height beyond the text within it) and giving it a background (color and/or image). <br>
+         <br>
+         You should also consider absolutely positioning your logo into this area  (see logo positioning styles item below.) <br>
+         <br>
+      Note: Do NOT confuse this &quot;header&quot; styles area in the style sheet with the &quot;headings&quot; styles area in the style sheet. The &quot;header&quot; area will be used to style the  banner (or top) area of each  page. On the other hand, the &quot;heading&quot; area will be used to style all the page's headings, wherever they may appear  throughout the pages.</li>
+      <li><strong>Heading Styles</strong>: Make the site's h1, h2, and h3 headings stand out appropriately and conform to your theme's color scheme and style.  Do so by using the &quot;h1, h2, h3&quot; selector to set properties common to all 3 headings, which must include font-family and color. Use embedded fonts in your font list (see the <a href="about_embedding_fonts.html" target="_blank">Embedding Fonts handout</a> to see how to do this using @font-face and .ttf fonts for Firefox). You are also asked to  create three separate rules, one for each of h1, h2, and h3, to set appropriate unique  font-sizes for each (using em or percentage units).     You are also required to use text-shadow property to add shadows to your headings. Try using a site like Gen3 for help creating the text-shadow code if your editor does not make it easy for you already. Other general formatting suggestions  to consider  include    use of other font and text properties, margins, borders, padding,  and/or background. <br>
+         <br>
+         Note: If you decide to use CSS3 properties like text-shadow on these headings, you should put those style rules in the separeate CSS3 styles section of the style sheet, where they will count for points down there but not here. Also note that you have a requirement to use another embedded Web font somewhere else in your pages. Place those styles wherever you are using that font.</li>
+      <li><strong>Intro Article (first paragraph) and Primary Article Styles</strong>: On every page, the area around the first paragraph 
+        of text (below the navigation bar of links) has a special id and so does the main page content below it. This was set 
+        up for you so you can style these areas uniquely from the rest of the page 
+        content. Use at least 1 CSS property setting  to make these 
+        text areas a little different from each other. Note that these changes should probably  be subtle in nature. For example, a completely different looking background  would probably be overkill and do more harm than good unless it was done tastefully.</li>
+      <li><strong>Copyright / Footer Styles</strong>: On every page, the last lines of 
+        text  are surrounded by a special HTML tag (footer).  Make at least 3 CSS property settings  to make this copyright / footer text different from the rest. In this case, your goal is  to separate this copyright / footer area from the main text of the page and make it look less prominent so try to de-emphasize this text.</li>
+      <li><strong>General Link Styles</strong>: Here you are trying to style   links  outside 
+        of the navigation bar area -- nav bar links will be styled in a separate section. 
+        So create 4 rules, one each for each link state -- one for general page links, 
+        visited links, hovered links, and active links. You must make meaningful usage of both &quot;color&quot; and &quot;text-decoration&quot; 
+        properties for each of the 4 link states (remember the ordering of these 4 
+        link state rules is important). You can also change other properties, such as background-color, 
+        if you like, but don't get too carried away here -- these links should remain 
+        somewhat subdued compared to the links in the navigation bar area. To test 
+        your link styles in the browser, check out the behavior of the links within 
+        the copyright / footer area, or the mailto links on the &quot;contact us&quot; page. When hovering over any link within your site, other parts of the page should not shift or move around -- so for example changing font-size when hovering is not a good idea. </li>
+      <li><strong>Navigation Bar Styles</strong>: these include formatting placed on the 
+        nav bar itself (the &quot;nav&quot; tag and/or the &quot;ul&quot;)  as well as 
+        the styles placed on the &quot;li's&quot; and links within it. Carefully use selectors so that these 
+        link styles affect only the links within this nav bar area and do not affect any links (or lists)  elsewhere on the pages. These links must be made to look and act much more 
+        dramatically than the more subdued general links outside the nav 
+        bar.  Write styles that affect all 4 link states: link, visited, hover, and active.<br>
+        <br>
+        You may choose to have the links display horizontally or vertically (your choice). Either way, you must use CSS to remove the display of the bullets (as in A3P5). It is required that these links look like buttons that have formatting changes when hovered.   Whether or not you actually use background images or just background colors (or background color gradients) is up to you and is discussed further below.<br>
+        <br>
+        Note that although it is not required to use background images on these links, 
+        it is a good opportunity to get credit for 2 of the 4 required background 
+        images. If you choose to do this, make sure that your link text is easy to 
+        read at all times and that they color coordinate with your hotel theme. If 
+        you choose not to use background images on these &quot;link buttons&quot; 
+        you should then consider using a background image on the nav bar box itself. 
+        See the printscreen gallery (or sample printscreen below) for example uses of link styles including background images.<br>
+        <br>
+        Note also that you can use a CSS3 generator site (see the &quot;CSS3 Styles&quot; requirements below to locate these CSS3 generator sites) to generate code for buttons that might include rounded corners and/or gradients which would help you fulfill some CSS3 requirements at the same time you are making nice looking buttons. (At least a few of the generator sites do buttons.)<br>
+          <br>
+          For full credit, you are asked to style differently that one nav bar link on each page that refers to its own page. In particular, format it so that it no longer looks or acts like a link (without changing the HTML). For example, the nav bar entry for &quot;Home&quot; on the home page should not look or act like a link, but instead should be emphasized to clarify that this is what page you are currently on. To do this, make clever use of the given id on each page's body tag and the given id on the nav bar link itself to form selectors such as &quot;#homepage #homelink&quot; and &quot;#eventspage #eventslink&quot;. Then you can use properties to emphasize that link appropriately, and make use of the &quot;cursor&quot; property to set it to &quot;default&quot; to make the mouse pointer look normal (instead of changing to a &quot;hand&quot;) when hovering over the link (so the user will not suspect that it is a link.) Why go through all of this CSS rather than just removing these links in each of our HTML pages? One motivation is so that our navigation bar can be exactly the same HTML on all pages and can then be managed much more easily throughout our site.<br>
+      </li>
+      <li><strong>General List Styles</strong>: Set appropriate styles to display your bullet 
+        graphics for all bulleted lists. Use appropriate selectors to define a different 
+        bullet graphic for 2 levels of bullets. Although you should test your list styles on both the 
+        Reservations and Contact Us pages, the rules should apply to any unordered list if it existed on any page (so don't use selectors that are specific to those pages). On the Reservations page, your 2 distinct 
+        bullet level images must display. The outer bullet graphic should look more prominent 
+        on the page than the inner bullet does. Note that you should be setting a 
+        unique bullet shape (such as disc, circle, or square) as well as a unique 
+        bullet image for each of these 2 levels (so that  in case the image doesn't show 
+        up in someone's browser the shape will instead). Check out the printscreen gallery to get some ideas for bullet graphics.<br>
+      </li>
+      <li><strong>Testimonial Styles</strong>: On every page, the last section 
+        of text (above the copyright / footer)  contains customer testimonials. Testimonials consists of 4 separate pieces that each require styling. They are: 1) The surrounding testimonial section itself.  2)  The 3 separate testimonial div's (below the testimonial h3 heading). 3) Each testimonial  contains  a paragraph for the quotation and 4) a paragraph for the speaker's name. Notice all of the existing id's and/or classes on each of these items have been set up for your use. There is also the h3 heading that can be optionally styled as needed. The styling requirements for these follow.<br>
+        <br>
+        In each of the 4 numbered areas above,  make at least 2 meaningful CSS property settings that together help to uniquely enhance the formatting of this testimonial section overall, to emphasize the quotes, to  de-emphasize the speaker names, and to bring the speaker names closer to the quotations they are associated with  (reduce top/bottom margins). Check out the printscreen gallery for some testimonial styling ideas.<br>
+      </li>
+      <li><strong>Logo Positioning Styles</strong>: Use absolute  positioning to take the div at the bottom of each HTML page (the div with an id of &quot;positionme&quot;) and  relocate its display so that it appears up toward the upper portion of each page to act as your hotel logo. To do so, you must make meaningful use  of the following positioning properties: position, z-index, and at least one of top, left, bottom, and right. <br>
+        <br>
+        For full credit, take your  hotel logo image and use it as a background image for this positioned div as follows. Give the &quot;positionme&quot; div a height and width to match the size of your logo image. Assign your logo image to be the background image for this div. (Since the div is otherwise empty, your background image will appear more like a foreground image.) Then use the position property and top and left (or right) properties to absolutely position the div wherever you want it to display on your pages. Use the z-index property as needed to handle any overlapping of items appropriately.  In the sample printscreen below, I absolutely positioned  the &quot;Rainforest Hotel&quot; logo and bird image toward the top right part of the page.<br>
+        <br>
+        If you cannot get the above preferred method to work, for partial credit you can instead just create an &quot;img&quot; tag within the div and then position the div (or just the image) in your css as described above.<br>
+      </li>
+      <li><strong>Multi-Column Layout Styles: </strong> for all pages. Refer to the Final Project Layout Guide for sample layouts and code to help you with this part. You can also check out the printscreen gallery to see some  layouts people have used in the past. The goal is to use float and/or absolute positioning along with any necessary margin and/or padding settings to create at least a 2-column layout for the content area of the pages. Try to use the existing HTML tags and &quot;id&quot;s, but if you need to insert a new &quot;div&quot; tag and/or &quot;id&quot; or something else related to page layout, feel free. But do not disturb the overall structure or ordering of the HTML in the existing pages without permission. You may not insert any tables to help you achieve the multi-column layout! <br>
+        <br>
+        <br>
+         <br>
+      </li>
+      <li><strong>Miscellaneous Styles</strong>: Any other styles you need to or would like to create that affect  all pages but do not seem to fit into any of the above categories can  be placed in this file under the &quot;miscellaneous&quot; category (at the bottom of the file.) No points are associated with this section.<br>
+        <br>
+      </li>
+    </ol>
+    <strong><br>
+    In general, here are some cool CSS3 properties (bling) to consider using in any of these above categories:
+            box-shadow, text-shadow, border-radius, border-image, background-size, opacity, transform, transition, etc.<br>
+            <br>
+Here are some links to CSS3 resources to help you create and use these properties effectively:<br>
+<br>
+<a href="http://css3gen.com/" target="_blank">CSS3 Gen</a> <br>
+</strong>A tool for generating CSS3 code for box shadows, text shadows, rounded corners, buttons, gradients, etc.<strong><br>
+<br>
+<a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> <br>
+</strong>Similar tool to the one above with slightly different properties / options / interface<strong><br>
+<br>
+<a href="http://www.css3.me/" target="_blank">CSS3 Me</a> <br>
+</strong>Yet another CSS3 property code generator site. <br>
+<strong><br>
+<a href="http://www.sitepoint.com/10-best-css3-code-generators/">10 Best CSS3 Generators</a><br>
+</strong>Even more CSS3 code genrators to choose from<strong><br>
+<br>
+<a href="http://css3gen.com/" target="_blank">10 CSS3 Properties You Might Want to Try</a> <br>
+</strong>Examples of above properties plus multiple backgrounds,  and transitions<strong><br>
+<br>
+<a href="http://www.w3schools.com/css3/default.asp" target="_blank"> CSS3 Tutorial From W3Schools</a> <br>
+</strong>Tutorials with more explanations of these properties<strong><br>
+<br>
+<a href="http://www.css3files.com/" target="_blank">More CSS3 Property Examples</a> <br>
+</strong>More examples including transitions and tranforms<strong><br>
+<br>
+<a href="http://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">CSS3 Browser Support</a> <br>
+</strong>What properties work in what browsers? Find out here!<strong><br>
+<br>
+<a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS3 Selectors</a> <br>
+</strong>Not about properties, but special CSS3 selectors you can use to target parts of your documents without the need for additional id's and classes. You can get CSS3 credit for these too.<strong><br>
+<br>
+<br>
+</strong>Note: when creating these CSS3 properties in your final project, do NOT use the browser prefixes that might be shown or generated by the above tools. Just use the actual CSS3 properties. For example, when setting a border radius (for rounded corners), do not include the top 2 lines for webkit browsers and mozilla browsers, only the last one which is the real CSS3 property -- the most recent browsers will work fine with it anyway and it will keep our stylesheets looking good:<br>
+<strong><br>
+<span style="margin-left: 35px; font-family: monospace;">-webkit-border-radius: 5px; /* DO NOT INCLUDE  -webkit- PROPERTIES */</span><br>
+<span style="margin-left: 35px; font-family: monospace;">-moz-border-radius: 5px; &nbsp; &nbsp;/* DO NOT INCLUDE  -moz- PROPERTIES */</span><br>
+<br>
+<span style="margin-left: 35px; font-family: monospace;">border-radius: 5px; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;/* INCLUDE THIS REAL CSS3 PROPERTY ONLY! */ </span><br>
+    <br>
+    <br>
+    Do not place any CSS rules in this common style sheet that are written 
+    for the specific details of only one particular page.</strong> Those kinds of 
+    style rules are discussed in a separate section of this handout below and will 
+    end up being placed in a different &quot;custom.css&quot; style sheet.<br>
+    <br>
+    For font sizes you may use &quot;px&quot;, &quot;em&quot;, or &quot;%&quot; but 
+    you many not use &quot;pt&quot; (or any other absolute measurement unit). It is 
+    recommended to give a font-size value for the body using % units. <br>
+    <br>
+    As you build these common styles, you should pay attention to general design practices 
+    such as proper color coordination, providing enough contrast between the text 
+    and its background, and keeping file sizes small (graphics). You may choose to 
+    design specifically for  1024x768 screens, or even 
+    try to make your design scale to different resolutions nicely (use relative sizes 
+    where possible).  
+    Be sure to test your styles often in the Firefox browser  and to <strong>validate your styles</strong> too (preferably using W3C). <br>
+  </li>
+  <li><b>Build your Custom Styles.</b> This style sheet, named &quot;custom.css&quot;, 
+    contains rules that are intended to deal with style issues on a single page in 
+    the site. Note that this style sheet is linked into every page (just like common.css 
+    is) but it is probably not going to be needed by them all. In reality one might 
+    consider another way of organizing these styles but it keeps things simple for 
+    this assignment for both you and me and you are required to use it. In fact, I 
+    will look only within this custom.css file when grading this part, so don't make 
+    the mistake of placing them within the style section of individual pages -- they 
+    will be not be graded. Like you did for the common styles, place your name in 
+    the appropriate comment area at the top of the style sheet. Then begin creating 
+    your CSS rules as described below, carefully placing them in the appropriate comment 
+    category sections of the &quot;custom.css&quot; style sheet. Here are the required 
+    style categories and details. Note that you might find the &quot;FAQ&quot; page 
+    styles easier to start with than the Events page calendar styles.
+    See the final project grading sheet to see a summary of these requirements and their associated point values.
+    <ol>
+      <li><strong>Events Page Calendar  Styles</strong>: Before you begin adding 
+        styles, you should already have inserted your 5 new events into the HTML of 
+        this table (as described earlier.) You should also already be familiar with 
+        the techniques described in the book (and in class hybrid video 6) for styling tables. It is also recommended that you take a close look at the code 
+        for this particular calendar table, making note of the existing 
+      divs, spans, classes, and id's that have been set up for your usage.<br>
+      <br>
+      Here are the CSS requirements. You must make property settings so that 
+        the following five calendar table areas look distinct: The table's heading, its days of the week 
+        (Mon, Tue, etc.), its date numbers (1, 2, 3, etc.), its calendar day table 
+        cells that are empty (the empty ones  after the 30th of the month), and 
+        its events. To make each area look unique, you can use whatever combinations 
+        of  properties that are appropriate. Use 
+        appropriate selectors based on the existing divs, spans, classes, and id's. 
+        A list of possible selectors to affect these table areas include table#calendar, #calendar th, th#monthYear, 
+        tr#weekdays, th.weekday, td.noday, td.day, td div.date, and td div.event. 
+        Choose styles that fit your theme and its color scheme. <br>
+        <br>
+You must have at least 5 distinct rules total (one for each of the 5 calendar table areas.)  
+        Check out the sample printscreen below to see just one possibility of styling 
+        this calendar table (and the printscreen gallery for others).  You are not allowed to change any of 
+        the table's HTML tags or attributes to change its appearance, such as inserting 
+        cellpadding. Those kinds of 
+        changes should all be made through the use of CSS properties, such as padding. You should not be changing any styles outside 
+        of the calendar table, just inside it. Keep in mind that the use of a background image 
+        here will count toward one of your four required background images.<br>
+        <br>
+      </li>
+      <li><strong>FAQ page Question &amp; Answer Styles</strong>: Note that you should 
+        have already added the required HTML for a new question and answer as indicated 
+        in an earlier part of this handout. Using the class names that have already 
+        been set up for you, create separate styles for all questions that are distinct 
+        from the styles you create for all answers. That way questions and answers 
+        will look a noticeably different -- your styling should make it easier to see where 
+        the questions are and where the answers are. To do so, use at least 2 property settings on questions and another 3 on answers (could be the same 2 properties but with different values given.) Suggested properties include  colors, borders, margins,  font properties, and 
+        text properties.  But don't make a lot of dramatic changes -- just 
+        change enough to make it look distinct and easier to read.  </li>
+      <li><strong>Services Page Image / Figure Styles</strong>: Use the 
+        box properties to produce a layout for this Services page that  floats the first figure (room service image and caption) to the left or right side 
+        of the page and the second figure (spa image and caption) to the opposite side of the page so that all the surrounding paragraph text wraps around them.   When  floating them to opposite sides of the page, float the surrounding &quot;figures&quot; (not the inner images) and use the figure's unique id's since they are being floated to opposite sides of the page. Within these same id-based rules,  give each figure an appropriate margin on its inner side only (for example, right margin if it is floated to the left) so that the surrounding text is 
+        not too close on the images' inner side but at the same time the images remain 
+        aligned with the page margins on their outer side. By using each image's  common class, write a rule  to place the same visible border on both of these images -- use a border 
+        style other than &quot;solid&quot; and choose an appropriate border color 
+        and width that coordinates well with the rest of your page (the border should be placed on the images not on the figures.  Lastly, give the caption text some basic styling appropriate to the situation. (Note that you can use the same (or very similar) styling to the hotel figure/image on the home page too.) As needed, you can use A3P4 as one example of floating figures, giving borders to images, and styling caption text. <br>
+      </li>
+      <li><strong>Miscellaneous styles</strong>: Any other styles you need to or would 
+        like to create for use on a single page can also be placed in this file under 
+        the &quot;miscellaneous&quot; category comment. Note that since this &quot;cusom.css&quot; 
+        style sheet is actually linked to all of the site's files, care must be taken 
+        to make sure that any selectors used in this file will only be affecting the 
+        intended page. In other words, you have to create selectors carefully, perhaps making use of the id's within the &quot;body&quot; tag of each page.  <br>
+      </li>
+    </ol>
+  </li>
+  <li><b> Local Testing: </b>Test your overall site appearance in the latest Google Chrome browser  (for Windows) at 1280x1024 resolution as these will be the settings used when it is graded. Initially do this testing using 
+    your local files (from your own drive). Note that if you do all of your testing in another browser, such as Internet Explorer, it is very possible that things may not look the same when graded in Chrome. </li>
+  <li>    <strong>Validate your CSS</strong>. Use the W3C validator to test your CSS for errors and correct any problems. Validation errors will cost you points. (Warnings will not.) See the grading sheet's &quot;Possible Deductions&quot; section at the bottom to see how many points may be at risk.</li>
+  <li><b>Uploading Your Site:</b> When your site is complete and tested, put your name on the outer folder that contains all the site files. Then zip that folder up -- in Windows, right click the folder and choose &quot;send to compressed (zipped) folder&quot;. Then submit that zip file in Blackboard to the &quot;Final Project&quot; assignment.<br>
+  </li>
+</ol>
+<p>&nbsp;</p>
+</body>
+</html>

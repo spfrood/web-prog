@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://www.faculty.rcc.edu/mcleod/css/handouts/a2p6-test.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>A2P6 Test Page</title>
+<style type="text/css">
+body {background:#F1EEBC;}
+h2 {font-size:120%;}
+td {padding:5px;}
+/*  Put your test styles below to help you answer the questions in A2P6  */
+/*  No need to turn this in.  Just turn in your answers to the questions */
+
+
+
+
+    tr:nth-child(odd) td:nth-child(even) {
+        border: red 1px dotted; 
+    }
+
+
+
+
+</style>
+</head>
+
+<body>
+<h1>A2P6 Test Page</h1>
+<p>Use this page to help answer the questions in A2P6 by inserting the appropriate CSS (and/or HTML) code as needed to test out the questions and answers and to see what works. By trying things out here instead of just guessing, you will likely learn more and improve your score. </p>
+<p>So the HTML sections below is there specifically to be appropriate for the questions and answers in assignment 2 part 6. Load up this page's code into your preferred HTML / CSS code editor (Notepad, Notepad ++, CSE HTML Validator, Dreamweaver, etc.) Then add and/or modify this code  into the existing "style" section toward the top of the page's code area as needed to help answer the questions in your assignment.</p>
+<h2>To help with question #1, use the given selectors to write a style rule  for  the  bulleted (unordered) list below without affecting the ordered list below it. For example, bold the list items or change their color to red:</h2>
+<p>Here is an unordered (bulleted) list:</p>
+<ul>
+  <li>Item #1</li>
+  <li>Item #2</li>
+  <li>Item #3</li>
+</ul>
+<p>Here is an ordered list:</p>
+<ol>
+  <li>Item #1</li>
+  <li>Item #2</li>
+  <li>Item #3</li>
+</ol>
+<h2>To help with question #2, use the given selectors to write a rule for the copyright paragraph below without  affecting the other paragraphs on this page. For example, change its color to red:
+</h2>
+<p id="copyright">Copyright McLeod Industries, all rights reserved.</p>
+<h2>To help with question #3,  write a "nav + a" rule and check to see what parts of the code below are affected by it: </h2>
+<nav><a href="http://www.faculty.rcc.edu/mcleod/css/handouts/a2p6-test.html#">nav link 1</a><br>
+  <a href="http://www.faculty.rcc.edu/mcleod/css/handouts/a2p6-test.html#">nav link 2</a><br>
+  <a href="http://www.faculty.rcc.edu/mcleod/css/handouts/a2p6-test.html#">nav link 3</a><br><br>
+</nav>
+<a href="http://www.faculty.rcc.edu/mcleod/css/handouts/a2p6-test.html#">after nav link 1</a><br>
+<a href="http://www.faculty.rcc.edu/mcleod/css/handouts/a2p6-test.html#">after nav link 2</a><br>
+<h2>To help with questions  #4, and #5, write styles for  the sample form below, which consists of  3 text boxes, 4 radio buttons, 2 text areas, and 1 submit button. But be careful, many browsers do not allow certain form elements like radio buttons or checkboxes to be altered by CSS properties like border or background, so try to float the input items to the right to see how many are affected:</h2>
+<form id="form1" name="form1" method="post">
+  <p>
+    <label for="textfield">First Name:</label>
+    <input type="text" name="textfield"> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="textfield2">Last Name:</label>
+    <input type="text" name="textfield2"> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="textfield3">Email Address:</label>
+    <input type="text" name="textfield3">
+  </p>
+  <p>Favorite Color: 
+    <label>
+      &nbsp;
+      <input type="radio" name="color" value="red">
+    Red</label>  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label>
+      <input type="radio" name="color" value="blue">
+    Blue</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label>
+      <input type="radio" name="color" value="green">
+    Green</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label>
+      <input type="radio" name="color" value="other">
+    Other</label>
+  </p>
+  <p>
+    <label for="textarea">Tell us what you like:</label>
+    <textarea name="textarea" cols="30" rows="3"></textarea>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="textarea2">Tell us what you don't like:</label>
+    <textarea name="textarea2" cols="30" rows="3"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="Submit">
+  </p>
+</form>
+<h2>To help with questions  #6, #7 and #8, use the given selectors to write styles for the 5 row, 5 column table below. For example, set a background color and see which table cells react:
+</h2>
+
+<table border="1">
+  <tbody>
+    <tr>
+      <td>Row 1</td>
+      <td>col 2</td>
+      <td>col 3</td>
+      <td>col 4</td>
+      <td>col 5</td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+      <td>col 2</td>
+      <td>col 3</td>
+      <td>col 4</td>
+      <td>col 5</td>
+    </tr>
+    <tr>
+      <td>Row 3</td>
+      <td>col 2</td>
+      <td>col 3</td>
+      <td>col 4</td>
+      <td>col 5</td>
+    </tr>
+    <tr>
+      <td>Row 4</td>
+      <td>col 2</td>
+      <td>col 3</td>
+      <td>col 4</td>
+      <td>col 5</td>
+    </tr>
+    <tr>
+      <td>Row 5</td>
+      <td>col 2</td>
+      <td>col 3</td>
+      <td>col 4</td>
+      <td>col 5</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</body></html>

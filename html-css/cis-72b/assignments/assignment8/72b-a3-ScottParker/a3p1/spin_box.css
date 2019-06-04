@@ -1,0 +1,82 @@
+/* Box Styles for Scott Parker's Daily Spin -- Complete Blog Pages */
+
+div#page {
+    border: solid 4px #770000;
+    background-color: #D8D8D8;
+    padding: 10px;
+}
+div#content {
+    border: solid 1px #3366CC;
+}
+div#masthead {
+    padding: 0 20px 30px 20px;
+}
+h2 {
+    float: right;
+    margin: -2em 25px 0 0;
+}
+
+div#links {
+    float: left;
+    width: 20%;
+    border: solid 1px #3366CC;
+    border-left-width: 0;
+    background-color: #D8D8D8;
+    margin-left: -1px;
+}
+#links p {
+    text-indent: 10px;
+    margin: 0;
+    padding: 1px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+#links .level2 p {
+    text-indent: 25px;
+}
+#links a {
+    display: block;
+    /* width: 100%;     * **for IE formatting only */   
+}
+#links a:link, #links a:visited {
+    /* add padding to compensate for the borders added in next section */
+    padding: 0 0 1px 3px;
+}
+#links a:hover, #links a:active {
+    /* remove padding here since it will be mimiced with the borders that are added */
+    padding: 0;
+    border-left: 3px solid #770000;
+    border-bottom: 1px solid #770000;
+}
+h3 {
+    margin: 0 0 5px 40px;
+}
+
+div#blogs {
+    float: left;
+    width: 65%;
+}
+#blogs p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    margin-left: 40px;
+    text-align: justify;
+}
+#blogs .pullquote {
+    float: right;
+    background-color: #F0F0F0;
+    /* the width below is 25% of the width of the parent container */
+    width: 25%;
+    color: #770000;
+    font: 1.4em Georgia, Times, serif;
+    margin: 0 0 0 15px;
+    padding: 2px 2px 0px 5px;
+    border: solid #770000;
+    border-width: 1px 3px 0 0;
+}
+
+div#footer {
+    /* to make footer stay at the bottom of the page */
+    clear: both;
+}
+
+/* Video time at:    */

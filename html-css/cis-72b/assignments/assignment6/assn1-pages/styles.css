@@ -1,0 +1,87 @@
+body {
+    background-color: #D4D7DD;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: sans-serif;
+}
+
+header {
+    height: 175px;
+    background-image: url(bg-banner-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3 {
+
+    font-family: Georgia, Times, serif;
+}
+
+h1 {
+    color: #F80708;
+    font-size: 50px;
+    text-shadow: 2px 3px 2px white;
+    padding-top: 80px;
+    text-indent: 20px;
+    margin-top: 1px;
+}
+
+nav {
+    width: 200px;
+    float: left;
+    margin-top: 50px;
+}
+
+#main {
+    padding-left: 200px;
+
+}
+
+nav a {
+    width: 200px;
+    height: 60px;
+    background: url(bg-links.gif) no-repeat center;
+    float: left;
+    background-size: 150px 45px;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    color: blue;
+}
+
+nav a:hover {
+    color: red;
+}
+
+ul {
+    list-style-image: url(skateboard-bullet.gif);
+    margin-left: 35px;
+}
+
+.productpic {
+    float: right;
+    margin-left: 30px;
+
+}
+
+footer {
+    text-align: center;
+    color: gray;
+    margin-top: 35px;
+}
+
+/* Beyond the Video by Scott Parker */
+
+h2 {
+    background-color: whitesmoke;
+    color: darkblue;
+}
+
+h3 {
+    margin-top: 35px;
+    color: darkblue;
+}
+
+

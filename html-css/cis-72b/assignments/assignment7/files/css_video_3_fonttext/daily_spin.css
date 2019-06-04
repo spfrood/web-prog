@@ -1,0 +1,140 @@
+/* Styles for Daily Spin pages, by Joe Student */
+
+body {
+    margin: 15px 5% 10px 5%;
+    background: #660;
+    color: black;
+}
+
+div#page {
+    background: #CCCC99;
+    padding: 10px;
+    border: solid #663300 3px;
+}
+
+table#main {
+    background: #FCFBF3;
+    border: solid 1px #999900;
+}
+
+h1 {
+    font-size: 300%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    color: #996600;
+    text-indent: 5px;
+}
+
+h1 span {
+    font-size: 30%;
+    font-variant: small-caps;
+}
+
+h2 {
+    text-align: right;
+    font-size: 135%;
+    color: olive;
+}
+
+h2,
+h4 .date {
+    font-family: "Courier New", Courier, monospace;
+    text-transform: lowercase;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .9;
+}
+
+h3 {
+    font-size: 110%;
+    color: olive;
+    margin-bottom: 1.5em;
+}
+
+h4 {
+    font-size: 80%;
+    color: #996600;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 90%;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+#footer p {
+    letter-spacing: -1px;
+    word-spacing: -1px;
+    line-height: 1.25;
+    font-size: 80%;
+    color: #CC9966;
+    text-align: center;
+}
+
+#trademark {
+    vertical-align: super;
+    font-size: 60%;
+}
+
+a:link,
+a:visited {
+    color: #999900;
+}
+
+a:hover,
+a:active {
+    color: olive;
+    text-decoration: underline overline;
+}
+
+#links {
+    border-right: 1px #CC9966 dotted;
+}
+
+#links a:link,
+#links a:visited {
+    text-decoration: none;
+}
+
+#links a:hover,
+#links a:active {
+    text-decoration: underline;
+}
+
+#links .level2 {
+    margin-left: 1.5em;
+}
+
+#links,
+h1 {
+    margin-left: 15px;
+}
+
+#links .thispage {
+    font-weight: bold;
+    color: #999900;
+}
+
+#links p {
+    line-height: 1.2;
+}
+
+#blogs {
+    margin-left: 10px;
+}
+
+#blogs p {
+    margin-bottom: 2.75em;
+}
