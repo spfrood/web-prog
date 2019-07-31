@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Whine. Bitch. Moan. Complain!</title>
+    <title>Welcome to Firebase Hosting</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/6.0.4/firebase-app.js"></script>
@@ -32,11 +32,10 @@
   </head>
   <body>
     <div id="message">
-      <h2>Splash Page</h2>
-      <h1>First attempt to do something with firebase</h1>
-      <p>Firebase is apparently working now!</p>
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
       <p>This is a test to see if the live index on the web is updating!</p>
-      <p>Since the message is showing up, then it's obviously working.</p>
       <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
