@@ -1,0 +1,39 @@
+<style type="text/css">
+    my-fun-little-tag {
+        color: red;
+        display: block;
+        font-size: 20px;
+    }
+    my-container-tag {
+        display: block;
+        margin-left: 60px;
+        color: green;
+    }
+    huge {
+        font-size: 30px;
+        font-style: bold;
+    }
+
+</style>
+
+<my-top-title style="color: blue">
+    How to invent web dev, in 7 steps
+</my-top-title>
+
+<my-container-tag>
+   <my-fun-little-tag>
+       1. NEED: To start, computers need to be able to send information to each other. <huge>INVENTION</huge>: At the highest level, we can give each computer a unique “address” at which we can reach it to request information. This is called an “IP address” as it establishes an “Internet Protocol.” This is also part of the concept of “Hyper Text” in “HTML”: being able to share text at “hyper speed” between computers.
+    </my-fun-little-tag>
+    <my-small-text>(this is really fun!)</my-small-text>
+    <my-fun-little-tag>
+    2. NEED: At it’s simplest, the web needs to transfer “language”: plain text. INVENTION: Open a file, give it a “.html” ending, and write some words. You’re jamming!
+    </my-fun-little-tag>
+    <my-fun-little-tag>
+        3. NEED: Next, web developers need a way to “markup” or “tag” groups of words in order to style them specifically (this is the “Markup Language” part of “HTML”.) INVENTION: We do this by surrounding words in opening and closing “tags.” We call words grouped in a tag “HTML elements.” We can apply style to elements via the “style” tag.
+
+    </my-fun-little-tag>
+    4. NEED: Styling individual tags leads to a lot of repeated code. This is stupid. INVENTION: By naming tags consistently, we can use a style tag to apply a standard styling to all tags and only write code in one place. This also creates a nice “abstraction”, or a re-usable component.
+    5. NEED: Taking a lesson from print layout, in order to build complex layouts, we’ll need ways to “compose” smaller elements into bigger sections. INVENTION: Can we use HTML elements to group, not words, but OTHER HTML elements? Then style the group as a whole? Yep.
+    6. NEED: Now that we’ve got HTML-ception, we need to think about how the styling of “parent” elements will “cascade” down and effect “child” elements style. INVENTION: In practice, any style applied to a parent will trickle (or “cascade”) down and be applied to its children (this is why we call styling “CSS”: “Cascading Style Sheet”). If a child doesn’t want that style, it can simply override it by specifying a different style property for itself.
+    7. Finally, looking to the future, you’ll notice this form of web dev is still missing key parts of what it takes for a system to be used collaboratively to build something bigger than one person. We haven’t standardized HTML tag names. There’s no interactivity or updating. Everything’s in one giant file, rather than small, bite-sized, re-usable code chunks. Solving all of these problems will be the work of Javascript and all the modern web libraries/frameworks that will emerge. Regardless of a framework/library name or approach (jQuery, React, Vue, etc), all of them are fundamentally trying to solve the same problem: build a system that’s compostable, consistent, and coherently styled.
+</my-container-tag>
