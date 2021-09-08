@@ -4,11 +4,17 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
-var x = 200;
-var y = 200;
+var x = 60;
+var y = 500;
 
-var dx = 1;
-var dy = 1;
+var rx = 150;
+var ry = 15;
+
+var dx = 2;
+var dy = 2;
+
+var drx = 1;
+var dry = -1;
 
 var frameNum = 0;
 
@@ -76,7 +82,7 @@ function rotaRect (nx, ny, degs, rwide, rhigh) {
 function rotaCirc (nx, ny, degs) {
     ctx.save();
     ctx.translate(nx, ny);
-    ctx.rotate(degs * (Math.PI / 180));
+    ctx.rotate(-degs * (Math.PI / 180));
     ctx.translate(-nx, -ny);
     // draw circular sprite using x, y below
     drawFace(nx, ny, "#FF00FF");
@@ -89,7 +95,8 @@ function draw () {
         frameNum = 0
     }
     frameNum += 1;
-    rotaCirc (x, y, frameNum);
+    rotaCirc (x, y, frameNum*2);
+    rotaRect (rx, ry, frameNum, 150, 150);
     if ((x + 50) >= canvas.width) {
         dx = -dx;
     } else if ((x - 50) <= 0) {
@@ -102,6 +109,22 @@ function draw () {
     }
     x += dx;
     y += dy;
+
+    if ((rx + 150) >= canvas.width) {
+        drx = -drx;
+    } else if (rx <= 0) {
+        drx = -drx;
+    }
+    if ((ry + 150) >= canvas.height) {
+        dry = -dry;
+    } else if (ry <= 0) {
+        dry = -dry;
+    }
+    x += dx;
+    y += dy;
+
+    rx += drx;
+    ry += dry;
 
     document.getElementById("status_box1").innerHTML = "Frame: " + frameNum;
 
