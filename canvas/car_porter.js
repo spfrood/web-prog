@@ -12,8 +12,11 @@ var y = 530;
 var dx = 0;
 var dy = 0;
 
-var speed = 2;
-var angle = 0
+var level = 1;
+var speed = 1;
+var parked = 0;
+
+var angle = 0;
 var speedMod = 0;
 
 // Display an image
@@ -40,9 +43,29 @@ function rotaImg(nx, ny, xlen, ylen, imSource, degs) {
     ctx.restore();
 }
 
+function drawField() {
+    ctx.beginPath();
+    ctx.fillStyle = "#EEEEEE";
+    ctx.fillRect(0, 40, 10, 410);
+    ctx.fillRect(10, 140, 160, 10);
+    ctx.fillRect(10, 240, 160, 10);
+    ctx.fillRect(10, 340, 160, 10);
+    ctx.fillRect(10, 440, 160, 10);
+
+    ctx.fillRect(canvas.width, 40, -10, 410);
+    ctx.fillRect(canvas.width - 10, 140, -160, 10);
+    ctx.fillRect(canvas.width - 10, 240, -160, 10);
+    ctx.fillRect(canvas.width - 10, 340, -160, 10);
+    ctx.fillRect(canvas.width - 10, 440, -160, 10);
+
+    ctx.fillRect(0, 40, canvas.width, 10);
+    
+    ctx.stroke();
+}
+
 // check to see if sprite is off canvas screen
 function outBounds() {
-    if (x + 60 >= canvas.width || x <= 0 || y + 30 >= canvas.height || y <= 0) {
+    if (x + 60 >= canvas.width + 10 || x <= 10 || y + 30 >= canvas.height || y - 15 <= 40) {
         cancelAnimationFrame();
     }
 }
@@ -64,7 +87,7 @@ document.addEventListener("mousemove", mouseEvents);
 
 function draw() {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
-
+    drawField();
 
     angle = (mouse.x - 480) / 10;
     if (angle > 0) {
@@ -77,12 +100,12 @@ function draw() {
     // draw a .bmp image file on the screen
     rotaImg(x, y, 60, 30, "car_01", angle);
     outBounds();
-    dx = speed * speedMod / 22.5;
-    dy = Math.abs(dx) - speed;
-    // x += dx;
-    // y += dy;
+    dx = (speed + level) * speedMod / 22.5;
+    dy = Math.abs(dx) - (speed + level);
+    x += dx;
+    y += dy;
 
-    document.getElementById("status_box1").innerHTML = "Frame: " + frameNum + "  x: " + x + "   y: " + y;
+    document.getElementById("status_box1").innerHTML = "x: " + x + "   y: " + y;
     document.getElementById("status_box2").innerHTML = "Angle: " + angle + "  dx: " + dx + "  dy: " + dy;
     document.getElementById("status_box3").innerHTML = "speed: " + speed + "  speedMod:  " + speedMod;
 
