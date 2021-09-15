@@ -32,6 +32,7 @@ var origArray = [];
 // This function controls the game
 function startGame() {
     checkMatches();
+    clearMatched();
 
     drawScene();
 }
@@ -183,15 +184,32 @@ function cloneArray() {
     }
 }
 
+// Remove matched tiles, move remaining tiles down, fill new tiles
+function clearMatched() {
+    for (i = 0; i < 8; i++) {
+        for (j = 7; j >= 0; j--) {
+            if (tiles[i][j] === "#FFFFFF") {
+                for (k = j; k >= 0; k--) {
+                    tiles[i][k] = tiles[i][k - 1];
+                    tiles[i][k - 1] = "#000000";
+                }
+            }
+        }
+    }
+}
+
 
 setTiles();
+// clone the original tile array
 cloneArray();
+// copy array to use as swap array
 initTemp();
 startGame();
 
 document.getElementById("status_box1").innerHTML = "Original Tile layout: </br>" + dispArray(origArray);
-document.getElementById("status_box3").innerHTML = "Matches:  " + matches;
-document.getElementById("status_box4").innerHTML = "tempTiles: </br>" + dispArray(tempTiles);
-document.getElementById("status_box5").innerHTML = "tiles (current display): </br>" + dispArray(tiles);
+document.getElementById("status_box2").innerHTML = "Matches:  " + matches;
+document.getElementById("status_box3").innerHTML = "tempTiles: </br>" + dispArray(tempTiles);
+document.getElementById("status_box4").innerHTML = "tiles (current display): </br>" + dispArray(tiles);
+document.getElementById("status_box5").innerHTML = "Frame Number:  " + frameNo;
 
 //setInterval(startGame, 200);
