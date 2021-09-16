@@ -188,12 +188,7 @@ function cloneArray() {
 function clearMatched() {
     for (i = 0; i < 8; i++) {
         for (j = 7; j >= 0; j--) {
-            if (tiles[i][j] === "#FFFFFF") {
-                for (k = j; k >= 0; k--) {
-                    tiles[i][k] = tiles[i][k - 1];
-                    tiles[i][k - 1] = "#000000";
-                }
-            }
+            
         }
     }
 }
