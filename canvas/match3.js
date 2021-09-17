@@ -23,19 +23,10 @@ const tWidth = 30;
 const tHeight = 30;
 
 // Arrays - one for original tiles, and a duplicate used when checking matches
-// Another array to keep track of original game state
 var tiles = [];
 var tempTiles = [];
+// for reference to check things afterwards
 var origArray = [];
-
-
-// This function controls the game
-function startGame() {
-    checkMatches();
-    clearMatched();
-
-    drawScene();
-}
 
 // assign a random color to each tile
 function setTiles() {
@@ -47,17 +38,18 @@ function setTiles() {
     }
 }
 
-// Copy the original tile states to a duplicate array
-function initTemp() {
+// Copy one array to a duplicate 2D array
+function cloneArray(parentArray, newArray) {
     for (i = 0; i < 8; i++) {
-        tempTiles[i] = [];
+        newArray[i] = [];
         for (j = 0; j < 8; j++) {
-            tempTiles[i][j] = tiles[i][j];
+            newArray[i][j] = parentArray[i][j];
         }
     }
 }
 
-// Copy the verticle matches to the originall array
+
+// Copy the vertical matches to the original array
 function copyMatch() {
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
@@ -79,7 +71,8 @@ function dispArray(arrayName) {
     let text = "";
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
-            text += arrayName[i][j] + " ";
+            text += '<span style="color:' + arrayName[i][j] + '">'
+            text += arrayName[i][j] + "</span> ";
         }
         text += "</br>";
     }
@@ -154,15 +147,39 @@ function checkVert() {
     }
 }
 
+// Remove matched tiles, move remaining tiles down, fill new tiles
+// function clearMatched() {
+// for (i = 7; i >= 0; i--) {
+//     for (j = 0; j < 8; j++) {
+//         let count = 1;
+//         let temp = "#999999";
+//         while (i - count >= 0 && tiles[i][j] == "#FFFFFF") {
+//             if (tiles[i - count][j] == "#FFFFFF") {
+//                 count++;
+//             } else {
+//                 temp = tiles[i][j];
+//                 tiles[i][j] = tiles[i - count][j];
+//                 tiles[i - count][j] = temp;
+//                 count++;
+//             }
+//         }
+//     }
+// }
+// }
+
+function moveMatched() {
+    
+}
+
 function checkMatches() {
     checkHoriz();
     checkVert();
     copyMatch();
+    // clearMatched();
+    moveMatched();
 }
 
 function drawScene() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
     // below loops draw colored tiles on screen according to values in tiles array
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
@@ -174,37 +191,32 @@ function drawScene() {
     frameNo++;
 }
 
-// Copy original array to a duplicate
-function cloneArray() {
-    for (i = 0; i < 8; i++) {
-        origArray[i] = [];
-        for (j = 0; j < 8; j++) {
-            origArray[i][j] = tiles[i][j];
-        }
-    }
-}
+// This function controls the game
+function startGame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    checkMatches();
 
-// Remove matched tiles, move remaining tiles down, fill new tiles
-function clearMatched() {
-    for (i = 0; i < 8; i++) {
-        for (j = 7; j >= 0; j--) {
-            
-        }
-    }
+    drawScene();
+    //requestAnimationFrame(startGame);
+
+    document.getElementById("status_box1").innerHTML = "Original Pixels: </br>" + dispArray(origArray);
+    document.getElementById("status_box2").innerHTML = "verticalPixels: </br>" + dispArray(tempTiles);
+    document.getElementById("status_box3").innerHTML = "Pixels (current display): </br>" + dispArray(tiles);
+    document.getElementById("status_box4").innerHTML = "Values:  " + matches;
+    document.getElementById("status_box5").innerHTML = "Frame:  " + frameNo;
+
 }
 
 
+// Assign each tile a color
 setTiles();
-// clone the original tile array
-cloneArray();
-// copy array to use as swap array
-initTemp();
+
+// copy start-state of tiles to new array to use as reference for later
+cloneArray(tiles, origArray);
+cloneArray(tiles, tempTiles);
+
+
+
+
+
 startGame();
-
-document.getElementById("status_box1").innerHTML = "Original Tile layout: </br>" + dispArray(origArray);
-document.getElementById("status_box2").innerHTML = "Matches:  " + matches;
-document.getElementById("status_box3").innerHTML = "tempTiles: </br>" + dispArray(tempTiles);
-document.getElementById("status_box4").innerHTML = "tiles (current display): </br>" + dispArray(tiles);
-document.getElementById("status_box5").innerHTML = "Frame Number:  " + frameNo;
-
-//setInterval(startGame, 200);
