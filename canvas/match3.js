@@ -27,6 +27,7 @@ var tiles = [];
 var tempTiles = [];
 // for reference to check things afterwards
 var origArray = [];
+var matchedArray = [];
 
 // assign a random color to each tile
 function setTiles() {
@@ -79,8 +80,10 @@ function dispArray(arrayName) {
     return text;
 }
 
-// check for horizontal matches
-function checkHoriz() {
+// Loop through to check for vertical matches, then assign matched squares on temp array
+// Then check for horizontal matches and assign values to temp array
+function checkMatch() {
+    // loop through checking for horizontal matches
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
             if (tiles[i][j] == tiles[i][j + 1] && tiles[i][j] == tiles[i][j + 2] && j + 2 < 8 && tiles[i][j] != "#FFFFFF") {
@@ -89,40 +92,37 @@ function checkHoriz() {
                         if (tiles[i][j] == tiles[i][j + 5] && j + 5 < 8) {
                             if (tiles[i][j] == tiles[i][j + 6] && j + 6 < 8) {
                                 if (tiles[i][j] == tiles[i][j + 7] && j + 7 < 8) {
-                                    tiles[i][j + 7] = "#FFFFFF";
+                                    tempTiles[i][j + 7] = "#FFFFFF";
                                 }
-                                tiles[i][j + 6] = "#FFFFFF";
+                                tempTiles[i][j + 6] = "#FFFFFF";
                             }
-                            tiles[i][j + 5] = "#FFFFFF";
+                            tempTiles[i][j + 5] = "#FFFFFF";
                         }
-                        tiles[i][j + 4] = "#FFFFFF";
+                        tempTiles[i][j + 4] = "#FFFFFF";
                     }
-                    tiles[i][j + 3] = "#FFFFFF";
+                    tempTiles[i][j + 3] = "#FFFFFF";
                 }
-                tiles[i][j] = "#FFFFFF";
-                tiles[i][j + 1] = "#FFFFFF";
-                tiles[i][j + 2] = "#FFFFFF";
+                tempTiles[i][j] = "#FFFFFF";
+                tempTiles[i][j + 1] = "#FFFFFF";
+                tempTiles[i][j + 2] = "#FFFFFF";
                 matches++;
             }
         }
     }
-}
-
-// check for verticle matches
-function checkVert() {
+    // loop through checking for vertical matches
     for (i = 0; i < 6; i++) {
         for (j = 0; j < 8; j++) {
-            if (tempTiles[i][j] === tempTiles[i + 1][j] && tempTiles[i][j] === tempTiles[i + 2][j] && i + 2 < 8 && tempTiles[i][j] != "#FFFFFF") {
+            if (tiles[i][j] === tiles[i + 1][j] && tiles[i][j] === tiles[i + 2][j] && i + 2 < 8 && tiles[i][j] != "#FFFFFF") {
                 if (i + 3 < 8) {
-                    if (tempTiles[i][j] === tempTiles[i + 3][j]) {
+                    if (tiles[i][j] === tiles[i + 3][j]) {
                         if (i + 4 < 8) {
-                            if (tempTiles[i][j] === tempTiles[i + 4][j]) {
+                            if (tiles[i][j] === tiles[i + 4][j]) {
                                 if (i + 5 < 8) {
-                                    if (tempTiles[i][j] === tempTiles[i + 5][j]) {
+                                    if (tiles[i][j] === tiles[i + 5][j]) {
                                         if (i + 6 < 8) {
-                                            if (tempTiles[i][j] === tempTiles[i + 6][j]) {
+                                            if (tiles[i][j] === tiles[i + 6][j]) {
                                                 if (i + 7 < 8) {
-                                                    if (tempTiles[i][j] === tempTiles[i + 7][j]) {
+                                                    if (tiless[i][j] === tiles[i + 7][j]) {
                                                         tempTiles[i + 7][j] = "#FFFFFF";
                                                     }
                                                 }
@@ -147,35 +147,55 @@ function checkVert() {
     }
 }
 
-// Remove matched tiles, move remaining tiles down, fill new tiles
-// function clearMatched() {
-// for (i = 7; i >= 0; i--) {
-//     for (j = 0; j < 8; j++) {
-//         let count = 1;
-//         let temp = "#999999";
-//         while (i - count >= 0 && tiles[i][j] == "#FFFFFF") {
-//             if (tiles[i - count][j] == "#FFFFFF") {
-//                 count++;
-//             } else {
-//                 temp = tiles[i][j];
-//                 tiles[i][j] = tiles[i - count][j];
-//                 tiles[i - count][j] = temp;
-//                 count++;
-//             }
-//         }
-//     }
-// }
-// }
-
 function moveMatched() {
-    
+    for (col = 0; col < 8; col++) {
+        let temp = "";
+        for (row = 7; row >= 0; row--) {
+            if (row > 0 && tiles[row][col] == "#FFFFFF") {
+                if (row - 1 >= 0 && tiles[row - 1][col] != "#FFFFFF") {
+                    temp = tiles[row][col];
+                    tiles[row][col] = tiles[row - 1][col];
+                    tiles[row - 1][col] = temp;
+                    temp = "";
+                } else if (row - 2 >= 0 && tiles[row - 2][col] != "#FFFFFF") {
+                    temp = tiles[row][col];
+                    tiles[row][col] = tiles[row - 2][col];
+                    tiles[row - 2][col] = temp;
+                    temp = "";
+                } else if (row - 3 >= 0 && tiles[row - 3][col] != "#FFFFFF") {
+                    temp = tiles[row][col];
+                    tiles[row][col] = tiles[row - 3][col];
+                    tiles[row - 3][col] = temp;
+                    temp = "";
+                } else if (row - 4 >= 0 && tiles[row - 4][col] != "#FFFFFF") {
+                    temp = tiles[row][col];
+                    tiles[row][col] = tiles[row - 4][col];
+                    tiles[row - 4][col] = temp;
+                    temp = "";
+                } else if (row - 5 >= 0 && tiles[row - 5][col] != "#FFFFFF") {
+                    temp = tiles[row][col];
+                    tiles[row][col] = tiles[row - 5][col];
+                    tiles[row - 5][col] = temp;
+                    temp = "";
+                } else if (row - 6 >= 0 && tiles[row - 6][col] != "#FFFFFF") {
+                    temp = tiles[row][col];
+                    tiles[row][col] = tiles[row - 6][col];
+                    tiles[row - 6][col] = temp;
+                    temp = "";
+                } else if (row - 7 >= 0 && tiles[row - 7][col] != "#FFFFFF") {
+                    temp = tiles[row][col];
+                    tiles[row][col] = tiles[row - 7][col];
+                    tiles[row - 7][col] = temp;
+                    temp = "";
+                }
+            } 
+        }
+    }
 }
 
 function checkMatches() {
-    checkHoriz();
-    checkVert();
+    checkMatch();
     copyMatch();
-    // clearMatched();
     moveMatched();
 }
 
@@ -192,31 +212,35 @@ function drawScene() {
 }
 
 // This function controls the game
-function startGame() {
+function fieldController() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     checkMatches();
 
     drawScene();
-    //requestAnimationFrame(startGame);
+    // requestAnimationFrame(fieldController);
 
-    document.getElementById("status_box1").innerHTML = "Original Pixels: </br>" + dispArray(origArray);
-    document.getElementById("status_box2").innerHTML = "verticalPixels: </br>" + dispArray(tempTiles);
-    document.getElementById("status_box3").innerHTML = "Pixels (current display): </br>" + dispArray(tiles);
-    document.getElementById("status_box4").innerHTML = "Values:  " + matches;
-    document.getElementById("status_box5").innerHTML = "Frame:  " + frameNo;
+    document.getElementById("status_box1").innerHTML = "Original Array: </br>" + dispArray(origArray);
+    document.getElementById("status_box2").innerHTML = "Matches: </br>" + dispArray(tempTiles);
+    document.getElementById("status_box3").innerHTML = "Current Display: </br>" + dispArray(tiles);
+    document.getElementById("status_box5").innerHTML = "Values:  " + matches;
+    document.getElementById("status_box6").innerHTML = "Frame:  " + frameNo;
 
 }
 
 
 // Assign each tile a color
 setTiles();
-
-// copy start-state of tiles to new array to use as reference for later
-cloneArray(tiles, origArray);
+// temp array for checking verticle matches
 cloneArray(tiles, tempTiles);
 
 
+// copy beginning-state of tiles to new array to use as reference for later
+// to verify matching/moving is going correctly
+cloneArray(tiles, origArray);
 
 
 
-startGame();
+
+
+
+fieldController();
