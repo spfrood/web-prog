@@ -4,6 +4,7 @@
 
 var frameNo = 0;
 var matches = 0;
+var tileVals = "";
 
 var canvas = document.getElementById("matchCan");
 var ctx = canvas.getContext("2d");
@@ -72,7 +73,7 @@ function dispArray(arrayName) {
     let text = "";
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
-            text += '<span style="color:' + arrayName[i][j] + '">'
+            text += '<span style="color:' + arrayName[i][j] + '">';
             text += arrayName[i][j] + "</span> ";
         }
         text += "</br>";
@@ -207,7 +208,6 @@ function drawScene() {
             ctx.fillRect(j * tWidth + 11, i * tHeight + 11, tWidth - 2, tHeight - 2);
         }
     }
-
     frameNo++;
 }
 
@@ -222,8 +222,9 @@ function fieldController() {
     document.getElementById("status_box1").innerHTML = "Original Array: </br>" + dispArray(origArray);
     document.getElementById("status_box2").innerHTML = "Matches: </br>" + dispArray(tempTiles);
     document.getElementById("status_box3").innerHTML = "Current Display: </br>" + dispArray(tiles);
-    document.getElementById("status_box5").innerHTML = "Values:  " + matches;
-    document.getElementById("status_box6").innerHTML = "Frame:  " + frameNo;
+    document.getElementById("status_box4").innerHTML = "Values:  " + matches;
+    document.getElementById("status_box5").innerHTML = "Frame:  " + frameNo;
+    document.getElementById("status_box6").innerHTML = "X/Y Coords of tiles:  </br>" + tileVals;
 
 }
 
