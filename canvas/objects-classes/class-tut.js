@@ -1,6 +1,8 @@
 // canvas dimension: width="260", height="370" is best for mobile displays
 // https://dev.to/oinak/step-by-step-tetris-on-es6-and-canvas-dob
 // https://www.w3schools.com/graphics/game_intro.asp// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+// https://www.w3schools.com/graphics/tryit.asp?filename=trygame_controllers_buttons
+
 
 // Get the canvas from the DOM and assign ctx as object for manipulating the Canvas attributes (context)
 var canvas = document.getElementById("matchCanvas");
@@ -27,7 +29,8 @@ var allTiles = [];
 var frameCount = 0;
 var matches = 0;
 
-var anim;
+var anim = true;
+var startButton = new Tile_data("#738448", 40, 270);
 
 // Create tile object that holds coordinates and color data for each tile
 function Tile_data(tile_color, x_cord, y_cord) {
@@ -167,6 +170,7 @@ function checkMatch() {
             }
         }
     }
+    drawTiles();
 }
 
 // Move matched tiles to the top of field (prepare to remove them)
@@ -214,6 +218,7 @@ function moveMatched() {
             }
         }
     }
+    drawTiles();
 }
 
 // Draw the tiles and the gameboard ** This is the main loop
@@ -225,24 +230,47 @@ function drawTiles() {
             ctx.fillRect(allTiles[i][j].xPixel, allTiles[i][j].yPixel, tWidth - 2, tHeight - 2);
         }
     }
+    drawPause();
+}
 
+// pause drawing
+function drawPause() {
+    if (frameCount == 100) {
+
+        cancelAnimationFrame(drawPause);
+        frameCount = 0;
+    } else {
+        frameCount++;
+    }
+    document.getElementById("status_box4").innerHTML = "frames:  " + frameCount;
+    requestAnimationFrame(drawPause);
 }
 
 // Function that controls drawing and display of items on the gamefield
 function fieldController() {
+    // Assign each tile a color - Run only once each game when starting a game.
+    ctx.fillStyle = startButton.color;
+    ctx.fillRect(startButton.xPixel, startButton.yPixel, 90, 30);
+    createBoard();
+    for (i = 0; i < 8; i++) {
+        for (j = 0; j < 8; j++) {
+            ctx.fillStyle = allTiles[i][j].color;
+            // "tWidth - 2" and "tHeight - 2" are to create a blank border between tiles
+            ctx.fillRect(allTiles[i][j].xPixel, allTiles[i][j].yPixel, tWidth - 2, tHeight - 2);
+        }
+    }
+    setColors(tiles);
     drawTiles();
+    checkMatch();
+    moveMatched();
 
-    // Keep track of frames for purpose of controlling animation speed
 
     document.getElementById("status_box1").innerHTML = "Array Values: </br>" + dispArray(tiles);
     document.getElementById("status_box2").innerHTML = "All Tiles Object: </br>" + dispTiles(allTiles);
     document.getElementById("status_box3").innerHTML = "Matches:  " + matches;
-    document.getElementById("status_box4").innerHTML = "FrameCount:  " + frameCount;
-}
 
-// Assign each tile a color - Run only once each game when starting a game.
-createBoard();
-setColors(tiles);
+
+}
 
 // Start the app
 fieldController();
