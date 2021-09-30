@@ -23,8 +23,14 @@ var allTiles = [];
 
 var matches = 0;
 
-var anim = true;
+var vMatch = false;
+var hMatch = false;
+
 var startButton = new Tile_data("#738448", 40, 270);
+
+var step = 0;
+var stepText = "";
+var frameNo = 0;
 
 // Create tile object that holds coordinates and color data for each tile
 function Tile_data(tile_color, x_cord, y_cord) {
@@ -102,7 +108,7 @@ function dispTable() {
 
 // Assign colors to the main gamefield and calculate x, y coordinate of each tile
 function createBoard() {
-    // below loops draw colored tiles on screen according to values in tiles array
+    // below loops assign colored tiles to gameboard object (allTiles) according to values in tiles array
     for (i = 0; i < 8; i++) {
         allTiles[i] = [];
         for (j = 0; j < 8; j++) {
@@ -111,9 +117,24 @@ function createBoard() {
     }
 }
 
+// function to give new color to matched tiles
+function newColors() {
+    // below loops gives a new color to white tiles
+    for (i = 0; i < 8; i++) {
+        for (j = 0; j < 8; j++) {
+            if (allTiles[i][j].color == "#FFFFFF") {
+                allTiles[i][j].color = findColor();
+            }
+        }
+    }
+    // copy new colors to the tiles array 
+    setColors(tiles);
+}
+
 // Loop through to check for vertical matches, then assign matched squares on temp array
 // Then check for horizontal matches and assign values to temp array
 function checkMatch() {
+    setColors(tiles);
     // loop through checking for horizontal matches
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
@@ -137,23 +158,24 @@ function checkMatch() {
                 allTiles[i][j + 1].color = "#FFFFFF";
                 allTiles[i][j + 2].color = "#FFFFFF";
                 matches++;
+                hMatch = true;
             }
         }
     }
     // loop through checking for vertical matches
     for (i = 0; i < 6; i++) {
         for (j = 0; j < 8; j++) {
-            if (tiles[i][j] === tiles[i + 1][j] && tiles[i][j] === tiles[i + 2][j] && i + 2 < 8 && tiles[i][j] != "#FFFFFF") {
+            if (tiles[i][j] == tiles[i + 1][j] && tiles[i][j] == tiles[i + 2][j] && i + 2 < 8 && tiles[i][j] != "#FFFFFF") {
                 if (i + 3 < 8) {
-                    if (tiles[i][j] === tiles[i + 3][j]) {
+                    if (tiles[i][j] == tiles[i + 3][j]) {
                         if (i + 4 < 8) {
-                            if (tiles[i][j] === tiles[i + 4][j]) {
+                            if (tiles[i][j] == tiles[i + 4][j]) {
                                 if (i + 5 < 8) {
-                                    if (tiles[i][j] === tiles[i + 5][j]) {
+                                    if (tiles[i][j] == tiles[i + 5][j]) {
                                         if (i + 6 < 8) {
-                                            if (tiles[i][j] === tiles[i + 6][j]) {
+                                            if (tiles[i][j] == tiles[i + 6][j]) {
                                                 if (i + 7 < 8) {
-                                                    if (tiless[i][j] === tiles[i + 7][j]) {
+                                                    if (tiless[i][j] == tiles[i + 7][j]) {
                                                         allTiles[i + 7][j].color = "#FFFFFF";
                                                     }
                                                 }
@@ -173,13 +195,17 @@ function checkMatch() {
                 allTiles[i + 1][j].color = "#FFFFFF";
                 allTiles[i + 2][j].color = "#FFFFFF";
                 matches++;
+                vMatch = true;
             }
         }
     }
+    setColors(tiles);
 }
 
 // Move matched tiles to the top of field (prepare to remove them)
 function moveMatched() {
+    vMatch = false;
+    hMatch = false;
     for (col = 0; col < 8; col++) {
         let temp = "";
         for (row = 7; row >= 0; row--) {
@@ -223,24 +249,61 @@ function moveMatched() {
             }
         }
     }
+    setColors(tiles);
+    checkMatch();
 }
 
 // Function that controls drawing and display of items on the gamefield
 function fieldController() {
-    // Assign each tile a color - Run only once each game when starting a game.
-    createBoard();
-    setColors(tiles);
-    checkMatch();
-    moveMatched();
-    dispTable();
 
+    switch (step) {
+        case 0:
+            checkMatch();
+            dispTable();
+            stepText = "Check matches, Display Table, end step 0";
+            step++;
+            break;
+        case 1:
+            frameNo++;
+            moveMatched();
+            document.getElementById("status_box2").innerHTML = "Repeats: (using frameNo) " + frameNo;
+            dispTable();
+            
+            if (vMatch || hMatch) {
+                step = 1;
+                stepText = "Move Matches, repeat again, repeat step 1";
+            } else {
+                step++;
+                stepText = "No Moves, No repeate, end step 1"
+            }
+            break;
+        case 2:
+            newColors();
+            dispTable();
+            stepText = "Added new colors, disp new table, end step 2";
+            step++;
+            break;
 
-    document.getElementById("status_box1").innerHTML = "Array Values: </br>" + dispArray(tiles);
-    document.getElementById("status_box2").innerHTML = "All Tiles Object: </br>" + dispTiles(allTiles);
-    document.getElementById("status_box3").innerHTML = "Matches:  " + matches;
+        default:
+            stepText = "No more steps, going back to step 0";
+            step = 0;
+    }
 
+    document.getElementById("status_box1").innerHTML = stepText;
+    //document.getElementById("status_box2").innerHTML = "Matches: " + matches;
+    document.getElementById("status_box3").innerHTML = "vMatch: " + vMatch + "  hMatch: " + hMatch;
+    document.getElementById("status_box4").innerHTML = "Frame Number: " + frameNo + " Next Step: " + step + " Matches: " + matches;
+    document.getElementById("status_box5").innerHTML = "Array Values: </br>" + dispArray(tiles);
+    document.getElementById("status_box6").innerHTML = "All Tiles Object: </br>" + dispTiles(allTiles);
 
 }
 
-// Start the app
-fieldController();
+function nextStep() {
+    fieldController();
+}
+
+// Assign each tile a color - Run only once each game when starting a game.
+createBoard();
+// Copy the original color values from the game field into an array
+setColors(tiles);
+dispTable();
