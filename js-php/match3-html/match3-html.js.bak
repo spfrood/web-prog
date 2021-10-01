@@ -13,6 +13,10 @@ const colorList = [
     "#00FFFF"
 ];
 
+// default width and height of tiles
+const tWidth = 30;
+const tHeight = 30;
+
 // Arrays - one for original tiles, and a duplicate used when checking matches
 var tiles = [];
 var allTiles = [];
@@ -34,9 +38,6 @@ function Tile_data(tile_color, x_cord, y_cord) {
     this.xPixel = x_cord;
     this.yPixel = y_cord;
     this.selected = false;
-    this.render = function() {
-        document.getElementById("R" + this.xPixel + "C" + this.yPixel).innerHTML = "<button style='background-color:" + this.color + ";width:30px;height:30px'></button>";
-    }
 }
 
 // Return a random color from the color list
@@ -99,7 +100,7 @@ function dispTable() {
     let text = "";
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
-            allTiles[i][j].render();
+            document.getElementById("R" + i + "C" + j).innerHTML = "<button style='background-color:" + allTiles[i][j].color + ";width:30px;height:30px'></button>";
         }
         text += "</br>";
     }
@@ -112,7 +113,7 @@ function createBoard() {
     for (i = 0; i < 8; i++) {
         allTiles[i] = [];
         for (j = 0; j < 8; j++) {
-            allTiles[i][j] = new Tile_data(findColor(), i, j);
+            allTiles[i][j] = new Tile_data(findColor(), j * tHeight + 11, i * tWidth + 11);
         }
     }
 }
@@ -300,12 +301,11 @@ function fieldController() {
 }
 
 function nextStep() {
-    // setInterval(fieldController, 250);
-    dispTable();
+    setInterval(fieldController, 250);
 }
 
 // Assign each tile a color - Run only once each game when starting a game.
 createBoard();
 // Copy the original color values from the game field into an array
 setColors(tiles);
-// dispTable();
+dispTable();
