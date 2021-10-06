@@ -18,6 +18,7 @@ var tiles = [];
 var allTiles = [];
 
 var matches = 0;
+var selectedTiles = 0;
 
 var vMatch = false;
 var hMatch = false;
@@ -34,8 +35,8 @@ function Tile_data(tile_color, x_cord, y_cord) {
     this.xPixel = x_cord;
     this.yPixel = y_cord;
     this.selected = false;
-    this.render = function() {
-        document.getElementById("R" + this.xPixel + "C" + this.yPixel).innerHTML = "<button style='background-color:" + this.color + ";width:30px;height:30px'></button>";
+    this.render = function () {
+        document.getElementById("R" + this.xPixel + "C" + this.yPixel).innerHTML = "<button onClick='checkSwap(this)'; style='background-color:" + this.color + ";width:30px;height:30px'></button>";
     }
 }
 
@@ -87,7 +88,7 @@ function dispTiles() {
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
             text += '<span style="color:' + allTiles[i][j].color + '">';
-            text += allTiles[i][j].color + " x: " + allTiles[i][j].xPixel + " y: " + allTiles[i][j].yPixel + "</span> ";
+            text += allTiles[i][j].selected + "</span> ";
         }
         text += "</br>";
     }
@@ -104,6 +105,17 @@ function dispTable() {
         text += "</br>";
     }
     return text;
+}
+
+// function to check and swap two selected tiles
+function checkSwap(button_obj) {
+    let temp = button_obj.id;
+    let tRow = temp.slice(1, 2);
+    let tCol = temp.slice(3, 4);
+    selectedTiles++;
+    allTiles[tRow][tCol] = true;
+
+    document.getElementById("status_box7").innerHTML = "Tiles Selected: " + temp;
 }
 
 // Assign colors to the main gamefield and calculate x, y coordinate of each tile
@@ -250,7 +262,6 @@ function moveMatched() {
         }
     }
     setColors(tiles);
-    // checkMatch();
 }
 
 // Function that controls drawing and display of items on the gamefield
@@ -269,7 +280,7 @@ function fieldController() {
             moveMatched();
             dispTable();
             checkMatch();
-            
+
             if (vMatch || hMatch) {
                 step = 0;
                 stepText = "Move Matches, go back to Step 0, end step 1";
@@ -296,11 +307,13 @@ function fieldController() {
     document.getElementById("status_box4").innerHTML = "Frame Number: " + frameNo;
     document.getElementById("status_box5").innerHTML = "Array Values: </br>" + dispArray(tiles);
     document.getElementById("status_box6").innerHTML = "All Tiles Object: </br>" + dispTiles(allTiles);
+    //document.getElementById("status_box7").innerHTML = "Tiles Selected: " + temp;
 
 }
 
 function nextStep() {
-    // setInterval(fieldController, 250);
+    //setInterval(fieldController, 250);
+    fieldController();
     dispTable();
 }
 
